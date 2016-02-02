@@ -26,6 +26,10 @@ angular.module('cttvApp', [
                 templateUrl: 'partials/search.html',
                 controller: 'SearchAppCtrl'
             }).
+            when('/target/:id/overview', {
+                templateUrl: 'partials/target-overview.html',
+                controller: 'TargetOverviewCtrl'
+            }).
     	    when('/target/:id/associations', {
                 templateUrl: 'partials/target-associations.html',
                 controller: 'targetAssociationsCtrl',

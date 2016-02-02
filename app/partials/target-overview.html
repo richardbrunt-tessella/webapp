@@ -1,0 +1,57 @@
+<div class="partial-page">
+    <cttv-page-progress-spinner></cttv-page-progress-spinner>
+
+    <div class="cttv-content-header">
+        <h3 view-title>{{search.label}} overview</h3>
+    </div>
+    <div class="row">
+        <h4>Associations</h4>
+        <!-- donut with number of diseases -->
+        <div class="col-md-3 text-center" style="margin:10px; border-radius:15px; background:#eeeeee">
+            <p>Diseases associated with {{search.label}}:<p>
+            <donut val={{search.count}} max={{search.count}}></donut>
+        </div>
+
+        <!-- histogram -->
+        <div class="col-md-3 text-center" style="margin:10px; border-radius:15px; background:#eeeeee">
+            <p>Score distribution:</p>
+            <cttv-score-histogram data=search.histogram controls=false min=0 max=1></cttv-score-histogram>
+        </div>
+
+        <!-- Main diseases -->
+        <div class="col-md-5" style="margin:10px; border-radius:15px; background:#eeeeee">
+            <p>Main associated diseases:</p>
+            <ul>
+                <li ng-repeat="disease in search.main"><a href="/evidence/{{search.query}}/{{disease.disease.id}}">{{disease.disease.name}}</a> ({{disease.association_score}})</li>
+            </ul>
+        </div>
+
+        <!-- Overview bubbles -->
+        <div class="col-md-5 text-center" style="margin:10px; border-radius:15px; background:#eeeeee">
+            <p>Associated therapeutic areas:</p>
+            <associations-overview target="{{search.query}}"></associations-overview>
+            <p>Explore as <a href="/target/{{search.query}}/associations">bubbles</a> / <a href="/target/{{search.query}}/associations">table</a> / <a href="/target/{{search.query}}/associations">tree</a></p>
+        </div>
+
+        <!-- Max score -->
+        <!-- donut with number of diseases -->
+        <div class="col-md-3 text-center" style="margin:10px; border-radius:15px; background:#eeeeee">
+            <p>Max score for the associated diseases:<p>
+            <donut val={{search.maxScore}} max=1></donut>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <h4>Target information</h4>
+        <!-- Tissues expressed -->
+        <div class="col-md-3" style="margin:10px; border-radius:15px; background:#eeeeee">
+            <p>Tissue expression</p>
+            <ul>
+                <li ng-repeat="tissue in search.tissues"><span style="color:{{tissue.color}}">{{tissue.factorName}}</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

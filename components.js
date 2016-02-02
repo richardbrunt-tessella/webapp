@@ -5,6 +5,8 @@ tnt.board = require("tnt.genome");
 tnt.utils = require("tnt.utils");
 tnt.tooltip = require("tnt.tooltip");
 tnt.ensembl = require("tnt.ensembl");
+tnt.tree = {};
+tnt.tree.node = require("tnt.tree.node");
 
 var targetGenomeBrowser = require("cttv.targetGenomeBrowser");
 var bubblesView = require("cttv.bubblesView");
@@ -13,6 +15,7 @@ var geneAssociationsTree = require("cttv.targetAssociationsTree");
 var flowerView = require("cttv.flowerView");
 
 var spinner = require("cttv.spinner");
+var donut = require("cttv.donut");
 
 var diseaseGraph = require("cttv.diseaseGraph");
 var targetGeneTree = require("cttv.targetGeneTree");

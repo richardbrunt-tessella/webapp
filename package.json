@@ -62,6 +62,7 @@
     "tnt.ensembl": "0.0.12",
     "tnt.genome": "0.0.39",
     "tnt.tooltip": "0.0.11",
+    "tnt.tree.node": "^0.1.1",
     "tnt.utils": "0.0.1"
   }
 }

@@ -797,8 +797,6 @@ angular.module('cttvDirectives', [])
 
                     tick = 1/data.length;
 
-
-
                     var x = d3.scale.linear()
                         .domain([0, 1])
                         .range([0, width]);
