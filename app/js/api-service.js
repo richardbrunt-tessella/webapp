@@ -47,9 +47,11 @@ angular.module('cttvServices')
         var api = cttvApi()
             .prefix("/api/latest/")
             //.prefix("https://beta.targetvalidation.org/api/latest/")
-            // .appname("cttv-web-app")
-            // .secret("2J23T20O31UyepRj7754pEA2osMOYfFK")
-            .onError(cttvAPI.defaultErrorHandler);
+            .appname("cttv-web-app")
+            .secret("2J23T20O31UyepRj7754pEA2osMOYfFK")
+            .verbose(true);
+            //.expiry(1);
+            // .onError(cttvAPI.defaultErrorHandler);
 
 
         // var token = {
@@ -114,12 +116,13 @@ angular.module('cttvServices')
             var deferred = $q.defer();
             var promise = deferred.promise;
             var url = api.url[queryObject.operation](params);
-            console.warn(url);
+            console.warn("URL : " + url);
 
             countRequest( params.trackCall===false ? undefined : true );
             //countRequest( true );
 
-            var resp = api.call(url, done);
+            var resp = api.call(url, done)
+                .catch(cttvAPI.defaultErrorHandler);
 
             return promise;
             //return resp.then(handleSuccess, handleError);
