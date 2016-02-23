@@ -30,6 +30,11 @@ angular.module('cttvApp', [
                 templateUrl: 'partials/target-overview.html',
                 controller: 'TargetOverviewCtrl'
             }).
+            when ('/target/:id/associations/bubbles', {
+                templateUrl: 'partials/target-associations-bubbles.html',
+                controller: 'targetAssociationsBubblesCtrl',
+                reloadOnSearch: false
+            }).
     	    when('/target/:id/associations', {
                 templateUrl: 'partials/target-associations.html',
                 controller: 'targetAssociationsCtrl',

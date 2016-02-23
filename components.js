@@ -11,6 +11,7 @@ tnt.tree.node = require("tnt.tree.node");
 var targetGenomeBrowser = require("cttv.targetGenomeBrowser");
 var bubblesView = require("cttv.bubblesView");
 var geneAssociations = require("cttv.targetAssociations");
+var targetAssociationsBubbles = require("cttv.targetAssociationsBubbles");
 var geneAssociationsTree = require("cttv.targetAssociationsTree");
 var flowerView = require("cttv.flowerView");
 
@@ -20,5 +21,3 @@ var donut = require("cttv.donut");
 var diseaseGraph = require("cttv.diseaseGraph");
 var targetGeneTree = require("cttv.targetGeneTree");
 var cttvApi = require("cttv.api");
-
-
