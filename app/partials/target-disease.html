@@ -388,9 +388,31 @@
                                 <span cttv-progress-spinner class="pull-right" ng-show="search.tables.literature.is_loading"></span>
                             </span>
                         </uib-accordion-heading>
-            			<div id="textMiningFoamTree" style="width: 800px; height: 600px"></div>
 
-                        <div ng-show="search.tables.literature.data.length>0 && !search.tables.literature.has_errors">
+                        <uib-tabset>
+							<uib-tab heading="Browser">
+							
+								<div class="row">
+									<div class="col-md-12">
+										<h4>Search box will go here</h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8">
+										<cttv-target-associations-foamtree on-cell-select="selectedCell" ></cttv-target-associations-foamtree>
+									</div>
+									<div class="col-md-4">
+										<div class="panel panel-default" style="width:100%; height:500px">
+											<div class="panel-heading">Articles</div>
+											<div class="panel-body">Content</div>
+										</div>
+										
+									</div>
+								</div>
+							</uib-tab>
+                            <uib-tab heading="Table">
+                            </br>
+                        	<div ng-show="search.tables.literature.data.length>0 && !search.tables.literature.has_errors">
 
                             <!-- <p>Source: <a href="/faq#data-provenance" target="_blank">DisGeNET</a> and <a href="/faq#data-provenance" target="_blank">Europe PMC</a></p> -->
                             <!-- <p>Source: <span ng-repeat="source in search.tables.literature.source_label"><a href="/faq#data-provenance" target="_blank">{{source}}</a><span></p> -->
@@ -444,6 +466,9 @@
                         <uib-alert type="danger" ng-show="search.tables.literature.has_errors" ng-cloak>
                             <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> There was an error retrieving this data. Please try again later.
                         </uib-alert>
+                        
+                        </uib-tab>
+                        </uib-tabset>
 
                     </div uib-accordion-group>
 

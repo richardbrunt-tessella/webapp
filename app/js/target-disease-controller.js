@@ -1762,16 +1762,13 @@
       		//make the collapse content to be shown or hide
       		$('#'+id).toggle("fast");
         };
+        
+        $scope.selectedCell = function(event) {
+        	
+        	console.log("You clicked on ", event.group);
+        }
 
         var initTableLiterature = function(){
-
-            var foamtree = new CarrotSearchFoamTree({
-                id: "textMiningFoamTree",
-                dataObject: {
-                  groups: 
-                	  [{"groups": [{"label": "sod1"}, {"label": "mutant"}, {"label": "mutation"}, {"label": "mutant sod1"}, {"label": "al"}, {"label": "fals"}, {"label": "protein"}, {"label": "superoxide"}, {"label": "dismutase"}, {"label": "superoxide dismutase"}], "label": "sod1"}, {"groups": [{"label": "tdp-43"}, {"label": "fus"}, {"label": "c9orf72"}, {"label": "al"}, {"label": "repeat"}, {"label": "mutation"}, {"label": "ftld"}, {"label": "protein"}, {"label": "expansion"}, {"label": "inclusion"}], "label": "tdp-43"}, {"groups": [{"label": "motor"}, {"label": "al"}, {"label": "neuron"}, {"label": "mouse"}, {"label": "motor neuron"}, {"label": "spinal"}, {"label": "cord"}, {"label": "spinal cord"}, {"label": "cell"}, {"label": "model"}], "label": "motor"}, {"groups": [{"label": "patient"}, {"label": "al"}, {"label": "study"}, {"label": "al patient"}, {"label": "control"}, {"label": "use"}, {"label": "clinical"}, {"label": "group"}, {"label": "motor"}, {"label": "muscle"}], "label": "patient"}, {"groups": [{"label": "cell"}, {"label": "protein"}, {"label": "neurodegenerative"}, {"label": "brain"}, {"label": "disorder"}, {"label": "gene"}, {"label": "study"}, {"label": "use"}, {"label": "role"}, {"label": "human"}], "label": "cell"}]
-                }
-              });
 
             return $('#literature-table').DataTable( cttvUtils.setTableToolsParamsExportColumns({
                 "data": formatLiteratureDataToArray($scope.search.tables.literature.data),
