@@ -26,6 +26,15 @@
         var accessLevelPrivate = "<span class='cttv-access-private' title='private data'></span>"; //"<span class='fa fa-users' title='private data'>G</span>";
         var accessLevelPublic = "<span class='cttv-access-public' title='public data'></span>"; //"<span class='fa fa-users' title='public data'>P</span>";
         
+        $scope.articles = {'All': ["article 1", "article 2", "article 3", "article 4", "article 5", "article 6", "article 7", "article 8", "article 9", "article 10"],
+        		           'motor': ["article 5", "article 6"],
+        		           'patient': ["article 1", "article 9"],
+        		           'tdp-43': ["article 2", "article 8", "article 10"],
+        		           'cell': ["article 3"],
+        		           'sod1': ["article 4", "article 7"]}
+        
+        $scope.displayArticles = $scope.articles["All"];
+        $scope.cluster = "All";
 
         $scope.search = {
             info : {
@@ -1764,8 +1773,8 @@
         };
         
         $scope.selectedCell = function(event) {
-        	
-        	console.log("You clicked on ", event.group);
+        	$scope.cluster = event.group["label"];
+        	$scope.displayArticles = $scope.articles[$scope.cluster];
         }
 
         var initTableLiterature = function(){

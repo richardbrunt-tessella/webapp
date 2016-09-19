@@ -23,7 +23,7 @@ angular.module('cttvDirectives')
 
         link: function (scope, element, attributes) {
         	
-        	scope.width = angular.isDefined(scope.width) ? scope.width :  700; // set the default width
+        	scope.width = angular.isDefined(scope.width) ? scope.width :  550; // set the default width
         	
         	scope.height = angular.isDefined(scope.height) ? scope.height : 500; // set the default height
 			
