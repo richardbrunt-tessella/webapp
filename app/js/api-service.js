@@ -32,6 +32,8 @@ angular.module('cttvServices')
             API_QUICK_SEARCH_URL : 'quickSearch',
             API_DISEASE_URL: 'disease',
             API_EXPRESSION_URL: 'expression',
+            API_CLUSTER_URL : 'cluster',
+            API_ABSTRACT_URL : 'abstract',
             API_TARGET_URL : 'target',
             API_TARGET_RELATION_URL : 'targetRelation',
             API_DISEASE_RELATION_URL : 'diseaseRelation',
@@ -359,6 +361,37 @@ angular.module('cttvServices')
             // queryObject[ cttvAPI.facets.SCORE_STR ] = queryObject[ cttvAPI.facets.SCORE_STR ] || [1] ;
             queryObject[ cttvAPI.facets.SCORE_MIN ] = queryObject[ cttvAPI.facets.SCORE_MIN ] || [0.0] ;
 
+            return callAPI({
+                operation: cttvAPI.API_ASSOCIATION_URL,
+                params: queryObject
+            });
+        };
+
+        /**
+        * Get cluster details via API gene() method based on ENSG code and EFO id
+        * queryObject params:
+        *  - target_id: the ENSG code, e.g. "ENSG00000005339"
+        *  - code: the (EFO) code
+        */
+        cttvAPI.getCluster = function(queryObject){
+            $log.log("cttvAPI.getCluster " + queryObject.target_id + ", " + queryObject.code);
+
+            // TODO: Change this to the cluster url
+            return callAPI({
+                operation: cttvAPI.API_ASSOCIATION_URL,
+                params: queryObject
+            });
+        };
+
+        /**
+        * Get abstract details for a particular cluster term 
+        * queryObject params:
+        *  - term: the cluster term, e.g. "patient"
+        */
+        cttvAPI.getAbstract = function(queryObject){
+            $log.log("cttvAPI.getCluster " + queryObject.term);
+
+            // TODO: Change this to the abstract url
             return callAPI({
                 operation: cttvAPI.API_ASSOCIATION_URL,
                 params: queryObject
