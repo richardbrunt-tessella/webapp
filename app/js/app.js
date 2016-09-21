@@ -110,6 +110,7 @@ var deps = [
     'hm.readmore',
     'ngSanitize',
     'swaggerUi',
+    'rzModule',
     'plugins'
 ];
 

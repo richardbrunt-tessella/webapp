@@ -15,8 +15,10 @@ var webappFiles = {
             'bower_components/angular-read-more/dist/readmore.min.js',
             'bower_components/lodash/dist/lodash.min.js',
             'bower_components/angular-sanitize/angular-sanitize.min.js',
+            'bower_components/angularjs-slider/dist/rzslider.min.js',
             'app/vendor/angular-swagger-ui/swagger-ui.min.js',
             'app/vendor/angular-swagger-ui/swagger-yaml-parser.min.js',
+            'app/vendor/foamtree/carrotsearch.foamtree.js',
             'node_modules/js-yaml/dist/js-yaml.min.js',
             'node_modules/marked/marked.min.js',
             'bower_components/FileSaver/FileSaver.min.js'
@@ -24,6 +26,7 @@ var webappFiles = {
 
         'css': [
             'bower_components/bootstrap/dist/css/bootstrap.css',
+            'bower_components/angularjs-slider/dist/rzslider.min.css',
             'app/vendor/angular-swagger-ui/swagger-ui.min.css'
             // 'app/vendor/datatables/buttons.dataTables.min.css'
         ],
@@ -57,6 +60,7 @@ var webappFiles = {
             'app/js/target-associations-table-directive.js',
             'app/js/target-associations-tree-directive.js',
             'app/js/target-associations-bubbles-directive.js',
+            'app/js/target-associations-foamtree-directive.js',
             'app/js/evidence-tables-directives.js',
             'app/js/disease-graph-directive.js',
             'app/js/lazyload.js',

@@ -4,7 +4,7 @@
 * FoamTree view for target associations
 */
 
-.directive('cttvTargetAssociationsFoamtree', function ($timeout) {
+.directive('cttvTargetAssociationsFoamtree', ['$timeout', function ($timeout) {
 
     return {
 
@@ -62,4 +62,4 @@
 
     }; // end return
 
-}); // end directive cttvTargetAssociationsFoamTree
+}]); // end directive cttvTargetAssociationsFoamTree

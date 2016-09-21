@@ -134,6 +134,18 @@
         border-color: $clr-ui-background-secondary;
     }
 
+	.rzslider .rz-pointer {
+  		top: -8px !important;
+  		width: 20px !important;
+  		height: 20px !important;
+  		-webkit-border-radius: 10px !important;
+     	-moz-border-radius: 10px !important;
+        border-radius: 10px !important;
+	}
+
+	.rzslider .rz-pointer:after {
+	  	content: none !important;
+	}
 
 
     cttv-slider {

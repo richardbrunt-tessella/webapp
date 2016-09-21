@@ -27,59 +27,102 @@
         var accessLevelPublic = "<span class='cttv-access-public' title='public data'></span>"; //"<span class='fa fa-users' title='public data'>P</span>";
         
         $scope.abstracts = {'All': [{"title": "Transcultural validation of the ALS-CBS Cognitive Section for the Brazilian population.",
-        	                        "abstractText": "Cognitive decline (CD) is common but often under-recognized in ALS due to the scarcity of adequate cognitive screening methods. In this scenario, the Amyotrophic Lateral Sclerosis Cognitive Behavioural Screen (ALS-CBS) is the most investigated instrument and presents high sensitivity to identify CD. Currently, there are no validated cognitive screening tools for ALS patients in the Brazilian population and little is known about the frequency of ALS related CD in the country. We assessed the accuracy of the Brazilian Portuguese version of ALS-CBS Cognitive Section (ALS-CBS-Br) for classifying the cognitive status of Brazilian patients compared to a standard neuropsychological battery, and estimated the prevalence of CD in the Brazilian ALS population. Among 73 initially recruited ALS patients, 49 were included. Twenty-four patients were excluded due to severe motor disability, FTD diagnosis or non-acceptance. Ten healthy controls were also included. Ten ALS patients (20%) were diagnosed with executive dysfunction (ALSci) based on the battery results. ALS-CBS-Br scores were significantly lower in the ALSci group (p\u2009<\u20090.001). The scale accuracy in detecting executive dysfunction was 0.906. Optimal cut-off score was 10/20 (specificity 0.872 and sensitivity 0.900). In conclusion, the ALS-CBS-Br may facilitate the recognition of CD in routine clinical care and complement future studies in our population." 
+        	                        "abstractText": "Cognitive decline (CD) is common but often under-recognized in ALS due to the scarcity of adequate cognitive screening methods. In this scenario, the Amyotrophic Lateral Sclerosis Cognitive Behavioural Screen (ALS-CBS) is the most investigated instrument and presents high sensitivity to identify CD. Currently, there are no validated cognitive screening tools for ALS patients in the Brazilian population and little is known about the frequency of ALS related CD in the country. We assessed the accuracy of the Brazilian Portuguese version of ALS-CBS Cognitive Section (ALS-CBS-Br) for classifying the cognitive status of Brazilian patients compared to a standard neuropsychological battery, and estimated the prevalence of CD in the Brazilian ALS population. Among 73 initially recruited ALS patients, 49 were included. Twenty-four patients were excluded due to severe motor disability, FTD diagnosis or non-acceptance. Ten healthy controls were also included. Ten ALS patients (20%) were diagnosed with executive dysfunction (ALSci) based on the battery results. ALS-CBS-Br scores were significantly lower in the ALSci group (p\u2009<\u20090.001). The scale accuracy in detecting executive dysfunction was 0.906. Optimal cut-off score was 10/20 (specificity 0.872 and sensitivity 0.900). In conclusion, the ALS-CBS-Br may facilitate the recognition of CD in routine clinical care and complement future studies in our population.",
+        	                        "year": "2015"
         							},
         							{"title": "Prevalence of Amyotrophic Lateral Sclerosis - United States, 2012-2013.",
-        	                        "abstractText": "Amyotrophic lateral sclerosis (ALS), commonly known as Lou Gehrig's disease, is a progressive and fatal neuromuscular disease for which no cure or viable treatment has been identified. ALS, like most noncommunicable diseases, is not a nationally notifiable disease in the United States." 
+        	                        "abstractText": "Amyotrophic lateral sclerosis (ALS), commonly known as Lou Gehrig's disease, is a progressive and fatal neuromuscular disease for which no cure or viable treatment has been identified. ALS, like most noncommunicable diseases, is not a nationally notifiable disease in the United States.",
+        	                        "year": "2005"
         							},
         							{"title": "A novel amyotrophic lateral sclerosis mutation in OPTN induces ER stress and Golgi fragmentation in vitro.",
-        	                        "abstractText": "Mutations in the optineurin gene (OPTN) have been identified in a small proportion (<1%) of sporadic and familial ALS cases, and the exact role of optineurin in the pathogenesis of ALS remains unclear. To further examine the role of OPTN in ALS, we sought to identify novel ALS variants in OPTN and examine their potential for pathogenicity in vitro. Whole exome sequence data from 74 familial ALS cases were analysed for the presence of novel OPTN mutations." 
+        	                        "abstractText": "Mutations in the optineurin gene (OPTN) have been identified in a small proportion (<1%) of sporadic and familial ALS cases, and the exact role of optineurin in the pathogenesis of ALS remains unclear. To further examine the role of OPTN in ALS, we sought to identify novel ALS variants in OPTN and examine their potential for pathogenicity in vitro. Whole exome sequence data from 74 familial ALS cases were analysed for the presence of novel OPTN mutations.",
+        	                        "year": "2007"
         							},
         							{"title": "Exploring Olfactory Function and Its Relation with Behavioral and Cognitive Impairment in Amyotrophic Lateral Sclerosis Patients: A Cross-Sectional Study.",
-        	                        "abstractText": "Behavioral and cognitive impairment are common in amyotrophic lateral sclerosis (ALS) and represent a continuum with frontotemporal dementia (FTD). Olfactory dysfunction has been described in a subset of ALS patients and might be associated with frontotemporal and insular cortex dysfunction.To evaluate olfaction dysfunction in ALS patients and its relationship with either cognition or behavioral impairment." 
+        	                        "abstractText": "Behavioral and cognitive impairment are common in amyotrophic lateral sclerosis (ALS) and represent a continuum with frontotemporal dementia (FTD). Olfactory dysfunction has been described in a subset of ALS patients and might be associated with frontotemporal and insular cortex dysfunction.To evaluate olfaction dysfunction in ALS patients and its relationship with either cognition or behavioral impairment.",
+        	                        "year": "2001"
         							},
         							{"title": "ALS Mutations Disrupt Phase Separation Mediated by Helical Structure in the TDP-43 Low-Complexity C-Terminal Domain.",
-        	                        "abstractText": "RNA-binding protein TDP-43 mediates essential RNA processing but forms cytoplasmic neuronal inclusions via its C-terminal domain (CTD) in amyotrophic lateral sclerosis (ALS). It remains unclear if aggregated TDP-43 is neurotoxic and if \u223c50 ALS-associated missense mutations in TDP-43 CTD promote aggregation, or if loss of normal function plays a role in disease. Recent work points to the ability of related proteins to assemble into functional phase-separated ribonucleoprotein granules via their structurally disordered prion-like domains." 
+        	                        "abstractText": "RNA-binding protein TDP-43 mediates essential RNA processing but forms cytoplasmic neuronal inclusions via its C-terminal domain (CTD) in amyotrophic lateral sclerosis (ALS). It remains unclear if aggregated TDP-43 is neurotoxic and if \u223c50 ALS-associated missense mutations in TDP-43 CTD promote aggregation, or if loss of normal function plays a role in disease. Recent work points to the ability of related proteins to assemble into functional phase-separated ribonucleoprotein granules via their structurally disordered prion-like domains.",
+        	                        "year": "2010"
         							}
         						   ],
         		           'motor': [{"title": "Transcultural validation of the ALS-CBS Cognitive Section for the Brazilian population.",
-        	                        "abstractText": "Cognitive decline (CD) is common but often under-recognized in ALS due to the scarcity of adequate cognitive screening methods. In this scenario, the Amyotrophic Lateral Sclerosis Cognitive Behavioural Screen (ALS-CBS) is the most investigated instrument and presents high sensitivity to identify CD. Currently, there are no validated cognitive screening tools for ALS patients in the Brazilian population and little is known about the frequency of ALS related CD in the country. We assessed the accuracy of the Brazilian Portuguese version of ALS-CBS Cognitive Section (ALS-CBS-Br) for classifying the cognitive status of Brazilian patients compared to a standard neuropsychological battery, and estimated the prevalence of CD in the Brazilian ALS population. Among 73 initially recruited ALS patients, 49 were included. Twenty-four patients were excluded due to severe motor disability, FTD diagnosis or non-acceptance. Ten healthy controls were also included. Ten ALS patients (20%) were diagnosed with executive dysfunction (ALSci) based on the battery results. ALS-CBS-Br scores were significantly lower in the ALSci group (p\u2009<\u20090.001). The scale accuracy in detecting executive dysfunction was 0.906. Optimal cut-off score was 10/20 (specificity 0.872 and sensitivity 0.900). In conclusion, the ALS-CBS-Br may facilitate the recognition of CD in routine clinical care and complement future studies in our population." 
+        	                        "abstractText": "Cognitive decline (CD) is common but often under-recognized in ALS due to the scarcity of adequate cognitive screening methods. In this scenario, the Amyotrophic Lateral Sclerosis Cognitive Behavioural Screen (ALS-CBS) is the most investigated instrument and presents high sensitivity to identify CD. Currently, there are no validated cognitive screening tools for ALS patients in the Brazilian population and little is known about the frequency of ALS related CD in the country. We assessed the accuracy of the Brazilian Portuguese version of ALS-CBS Cognitive Section (ALS-CBS-Br) for classifying the cognitive status of Brazilian patients compared to a standard neuropsychological battery, and estimated the prevalence of CD in the Brazilian ALS population. Among 73 initially recruited ALS patients, 49 were included. Twenty-four patients were excluded due to severe motor disability, FTD diagnosis or non-acceptance. Ten healthy controls were also included. Ten ALS patients (20%) were diagnosed with executive dysfunction (ALSci) based on the battery results. ALS-CBS-Br scores were significantly lower in the ALSci group (p\u2009<\u20090.001). The scale accuracy in detecting executive dysfunction was 0.906. Optimal cut-off score was 10/20 (specificity 0.872 and sensitivity 0.900). In conclusion, the ALS-CBS-Br may facilitate the recognition of CD in routine clinical care and complement future studies in our population.",
+        	                        "year": "2015"
         							},
         							{"title": "Prevalence of Amyotrophic Lateral Sclerosis - United States, 2012-2013.",
-        	                        "abstractText": "Amyotrophic lateral sclerosis (ALS), commonly known as Lou Gehrig's disease, is a progressive and fatal neuromuscular disease for which no cure or viable treatment has been identified. ALS, like most noncommunicable diseases, is not a nationally notifiable disease in the United States." 
+        	                        "abstractText": "Amyotrophic lateral sclerosis (ALS), commonly known as Lou Gehrig's disease, is a progressive and fatal neuromuscular disease for which no cure or viable treatment has been identified. ALS, like most noncommunicable diseases, is not a nationally notifiable disease in the United States.",
+        	                        "year": "2005"
         							}
         							],
         		           'patient': [{"title": "Prevalence of Amyotrophic Lateral Sclerosis - United States, 2012-2013.",
-        	                        "abstractText": "Amyotrophic lateral sclerosis (ALS), commonly known as Lou Gehrig's disease, is a progressive and fatal neuromuscular disease for which no cure or viable treatment has been identified. ALS, like most noncommunicable diseases, is not a nationally notifiable disease in the United States." 
+        	                        "abstractText": "Amyotrophic lateral sclerosis (ALS), commonly known as Lou Gehrig's disease, is a progressive and fatal neuromuscular disease for which no cure or viable treatment has been identified. ALS, like most noncommunicable diseases, is not a nationally notifiable disease in the United States.",
+        	                        "year": "2005"
         							},
         							{"title": "A novel amyotrophic lateral sclerosis mutation in OPTN induces ER stress and Golgi fragmentation in vitro.",
-        	                        "abstractText": "Mutations in the optineurin gene (OPTN) have been identified in a small proportion (<1%) of sporadic and familial ALS cases, and the exact role of optineurin in the pathogenesis of ALS remains unclear. To further examine the role of OPTN in ALS, we sought to identify novel ALS variants in OPTN and examine their potential for pathogenicity in vitro. Whole exome sequence data from 74 familial ALS cases were analysed for the presence of novel OPTN mutations." 
+        	                        "abstractText": "Mutations in the optineurin gene (OPTN) have been identified in a small proportion (<1%) of sporadic and familial ALS cases, and the exact role of optineurin in the pathogenesis of ALS remains unclear. To further examine the role of OPTN in ALS, we sought to identify novel ALS variants in OPTN and examine their potential for pathogenicity in vitro. Whole exome sequence data from 74 familial ALS cases were analysed for the presence of novel OPTN mutations.",
+        	                        "year": "2007"
         							}
         							],
         		           'tdp-43': [{"title": "A novel amyotrophic lateral sclerosis mutation in OPTN induces ER stress and Golgi fragmentation in vitro.",
-        	                        "abstractText": "Mutations in the optineurin gene (OPTN) have been identified in a small proportion (<1%) of sporadic and familial ALS cases, and the exact role of optineurin in the pathogenesis of ALS remains unclear. To further examine the role of OPTN in ALS, we sought to identify novel ALS variants in OPTN and examine their potential for pathogenicity in vitro. Whole exome sequence data from 74 familial ALS cases were analysed for the presence of novel OPTN mutations." 
+        	                        "abstractText": "Mutations in the optineurin gene (OPTN) have been identified in a small proportion (<1%) of sporadic and familial ALS cases, and the exact role of optineurin in the pathogenesis of ALS remains unclear. To further examine the role of OPTN in ALS, we sought to identify novel ALS variants in OPTN and examine their potential for pathogenicity in vitro. Whole exome sequence data from 74 familial ALS cases were analysed for the presence of novel OPTN mutations.",
+        	                        "year": "2007"
         							},
         							{"title": "Exploring Olfactory Function and Its Relation with Behavioral and Cognitive Impairment in Amyotrophic Lateral Sclerosis Patients: A Cross-Sectional Study.",
-        	                        "abstractText": "Behavioral and cognitive impairment are common in amyotrophic lateral sclerosis (ALS) and represent a continuum with frontotemporal dementia (FTD). Olfactory dysfunction has been described in a subset of ALS patients and might be associated with frontotemporal and insular cortex dysfunction.To evaluate olfaction dysfunction in ALS patients and its relationship with either cognition or behavioral impairment." 
+        	                        "abstractText": "Behavioral and cognitive impairment are common in amyotrophic lateral sclerosis (ALS) and represent a continuum with frontotemporal dementia (FTD). Olfactory dysfunction has been described in a subset of ALS patients and might be associated with frontotemporal and insular cortex dysfunction.To evaluate olfaction dysfunction in ALS patients and its relationship with either cognition or behavioral impairment.",
+        	                        "year": "2001"
         							}
         							],
         		           'cell': [{"title": "Exploring Olfactory Function and Its Relation with Behavioral and Cognitive Impairment in Amyotrophic Lateral Sclerosis Patients: A Cross-Sectional Study.",
-        	                        "abstractText": "Behavioral and cognitive impairment are common in amyotrophic lateral sclerosis (ALS) and represent a continuum with frontotemporal dementia (FTD). Olfactory dysfunction has been described in a subset of ALS patients and might be associated with frontotemporal and insular cortex dysfunction.To evaluate olfaction dysfunction in ALS patients and its relationship with either cognition or behavioral impairment." 
+        	                        "abstractText": "Behavioral and cognitive impairment are common in amyotrophic lateral sclerosis (ALS) and represent a continuum with frontotemporal dementia (FTD). Olfactory dysfunction has been described in a subset of ALS patients and might be associated with frontotemporal and insular cortex dysfunction.To evaluate olfaction dysfunction in ALS patients and its relationship with either cognition or behavioral impairment.",
+        	                        "year": "2001"
         							},
         							{"title": "ALS Mutations Disrupt Phase Separation Mediated by Helical Structure in the TDP-43 Low-Complexity C-Terminal Domain.",
-        	                        "abstractText": "RNA-binding protein TDP-43 mediates essential RNA processing but forms cytoplasmic neuronal inclusions via its C-terminal domain (CTD) in amyotrophic lateral sclerosis (ALS). It remains unclear if aggregated TDP-43 is neurotoxic and if \u223c50 ALS-associated missense mutations in TDP-43 CTD promote aggregation, or if loss of normal function plays a role in disease. Recent work points to the ability of related proteins to assemble into functional phase-separated ribonucleoprotein granules via their structurally disordered prion-like domains." 
+        	                        "abstractText": "RNA-binding protein TDP-43 mediates essential RNA processing but forms cytoplasmic neuronal inclusions via its C-terminal domain (CTD) in amyotrophic lateral sclerosis (ALS). It remains unclear if aggregated TDP-43 is neurotoxic and if \u223c50 ALS-associated missense mutations in TDP-43 CTD promote aggregation, or if loss of normal function plays a role in disease. Recent work points to the ability of related proteins to assemble into functional phase-separated ribonucleoprotein granules via their structurally disordered prion-like domains.",
+        	                        "year": "2010"
         							}
         						   ],
         		           'sod1': [ {"title": "ALS Mutations Disrupt Phase Separation Mediated by Helical Structure in the TDP-43 Low-Complexity C-Terminal Domain.",
-        	                        "abstractText": "RNA-binding protein TDP-43 mediates essential RNA processing but forms cytoplasmic neuronal inclusions via its C-terminal domain (CTD) in amyotrophic lateral sclerosis (ALS). It remains unclear if aggregated TDP-43 is neurotoxic and if \u223c50 ALS-associated missense mutations in TDP-43 CTD promote aggregation, or if loss of normal function plays a role in disease. Recent work points to the ability of related proteins to assemble into functional phase-separated ribonucleoprotein granules via their structurally disordered prion-like domains." 
+        	                        "abstractText": "RNA-binding protein TDP-43 mediates essential RNA processing but forms cytoplasmic neuronal inclusions via its C-terminal domain (CTD) in amyotrophic lateral sclerosis (ALS). It remains unclear if aggregated TDP-43 is neurotoxic and if \u223c50 ALS-associated missense mutations in TDP-43 CTD promote aggregation, or if loss of normal function plays a role in disease. Recent work points to the ability of related proteins to assemble into functional phase-separated ribonucleoprotein granules via their structurally disordered prion-like domains.",
+        	                        "year": "2010"
         							},
         							{"title": "Transcultural validation of the ALS-CBS Cognitive Section for the Brazilian population.",
-        	                        "abstractText": "Cognitive decline (CD) is common but often under-recognized in ALS due to the scarcity of adequate cognitive screening methods. In this scenario, the Amyotrophic Lateral Sclerosis Cognitive Behavioural Screen (ALS-CBS) is the most investigated instrument and presents high sensitivity to identify CD. Currently, there are no validated cognitive screening tools for ALS patients in the Brazilian population and little is known about the frequency of ALS related CD in the country. We assessed the accuracy of the Brazilian Portuguese version of ALS-CBS Cognitive Section (ALS-CBS-Br) for classifying the cognitive status of Brazilian patients compared to a standard neuropsychological battery, and estimated the prevalence of CD in the Brazilian ALS population. Among 73 initially recruited ALS patients, 49 were included. Twenty-four patients were excluded due to severe motor disability, FTD diagnosis or non-acceptance. Ten healthy controls were also included. Ten ALS patients (20%) were diagnosed with executive dysfunction (ALSci) based on the battery results. ALS-CBS-Br scores were significantly lower in the ALSci group (p\u2009<\u20090.001). The scale accuracy in detecting executive dysfunction was 0.906. Optimal cut-off score was 10/20 (specificity 0.872 and sensitivity 0.900). In conclusion, the ALS-CBS-Br may facilitate the recognition of CD in routine clinical care and complement future studies in our population." 
+        	                        "abstractText": "Cognitive decline (CD) is common but often under-recognized in ALS due to the scarcity of adequate cognitive screening methods. In this scenario, the Amyotrophic Lateral Sclerosis Cognitive Behavioural Screen (ALS-CBS) is the most investigated instrument and presents high sensitivity to identify CD. Currently, there are no validated cognitive screening tools for ALS patients in the Brazilian population and little is known about the frequency of ALS related CD in the country. We assessed the accuracy of the Brazilian Portuguese version of ALS-CBS Cognitive Section (ALS-CBS-Br) for classifying the cognitive status of Brazilian patients compared to a standard neuropsychological battery, and estimated the prevalence of CD in the Brazilian ALS population. Among 73 initially recruited ALS patients, 49 were included. Twenty-four patients were excluded due to severe motor disability, FTD diagnosis or non-acceptance. Ten healthy controls were also included. Ten ALS patients (20%) were diagnosed with executive dysfunction (ALSci) based on the battery results. ALS-CBS-Br scores were significantly lower in the ALSci group (p\u2009<\u20090.001). The scale accuracy in detecting executive dysfunction was 0.906. Optimal cut-off score was 10/20 (specificity 0.872 and sensitivity 0.900). In conclusion, the ALS-CBS-Br may facilitate the recognition of CD in routine clinical care and complement future studies in our population.",
+        	                        "year": "2015"
         							}
         						   ]}
         
         $scope.displayAbstracts = $scope.abstracts["All"];
         $scope.cluster = "All";
+
+		$scope.slider = {
+				  min: 2000,
+				  max: 2016,
+				  options: {
+					floor: 2000,
+					ceil: 2016,
+					onChange: function(sliderId, modelValue, highValue, pointerType) {
+						filterAbstracts(modelValue, highValue);
+					} 
+				  }
+		};
+		
+		function filterAbstracts(min, max) {
+
+			$scope.displayAbstracts = $scope.abstracts[$scope.cluster];
+			
+			var acceptedAbstracts = [];
+			
+			$scope.displayAbstracts.forEach(function(item) {
+				
+				if(item.year >= min && item.year <= max) {
+					acceptedAbstracts.push(item);
+				}
+			});
+			
+			$scope.displayAbstracts = acceptedAbstracts;
+		}
 
         $scope.search = {
             info : {
@@ -1830,7 +1873,8 @@
                 } ).
                 then(
                     function(resp) {
-                    	$scope.displayAbstracts = $scope.abstracts[$scope.cluster];
+                    	
+                    	filterAbstracts($scope.slider.min, $scope.slider.max);
                     },
                     cttvAPIservice.defaultErrorHandler
                 );
@@ -1841,7 +1885,6 @@
          */
         var getCluster = function(){
         	
-        	console.log("in getCluster");
             // get cluster specific info
             cttvAPIservice.getCluster( {
                     target_id:$scope.search.target,
