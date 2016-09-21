@@ -14,12 +14,13 @@
             width: '=?',
             height: '=?',
             clusterData: '=',
-            onCellSelect: '=?'
+            onCellSelect: '=?',
+            tab: '=?' // use this if the directive is in a tab
         },
 
         template: '<div id="foamtree" style="width: {{width}}px; height: {{height}}px"></div>',
 
-        link: function (scope, element, attributes) {
+        link: function (scope, element, attribute) {
         	
         	var foamtree = {};
 
@@ -32,31 +33,41 @@
         	}
         	
         	scope.onCellSelect = angular.isDefined(scope.onCellSelect) ? scope.onCellSelect: function(event) {console.log("clicked on ", event.group)};
-
-        	// need the timeout so the template can load and we have an id to use to display the foamtree
-			$timeout( function() {
-				foamtree = new CarrotSearchFoamTree({
-					id: "foamtree",
-					dataObject: {
-						groups: scope.clusterData
-					},
-					onGroupClick: scope.onCellSelect
+        	
+        	if(!angular.isDefined(scope.tab)) {
+        		drawFoamTree();
+        	}
+        	
+        	function drawFoamTree() {
+				// need the timeout so the template can load and we have an id to use to display the foamtree
+				$timeout( function() {
+					foamtree = new CarrotSearchFoamTree({
+						id: "foamtree",
+						dataObject: {
+							groups: scope.clusterData
+						},
+						onGroupClick: scope.onCellSelect
+					});
 				});
+        	}
+        	
+			scope.$watch('tab', function() {
+				if(scope.tab) {
+					drawFoamTree();
+				}
 			});
 
 			// when the cluster data changes, redraw the foamtree
-        	scope.$watch('clusterData', function() {
-        		
-        		if(angular.isDefined(foamtree.set)) {
+			scope.$watch('clusterData', function() {
+				if(angular.isDefined(foamtree.set)) {
 					foamtree.set({
 						dataObject: {
 							groups: scope.clusterData
 						}
 					})
-					
 					foamtree.redraw();
-        		}
-        	})
+				}
+			})
 
         } // end link
 

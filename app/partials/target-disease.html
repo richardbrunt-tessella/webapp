@@ -390,43 +390,6 @@
                         </uib-accordion-heading>
 
                         <uib-tabset>
-							<uib-tab heading="Browser">
-								</br>	
-								<div class="row">
-									<div class="col-md-6">
-										<cttv-target-associations-foamtree width="550" height="550" on-cell-select="selectedCell" cluster-data="clusterData" ></cttv-target-associations-foamtree>
-									</div>
-									<div class="col-md-6">
-										<div class="panel panel-default" style="width:100%; height:550px">
-											<div class="panel-heading">{{displayAbstracts.length}} {{displayAbstracts.length == 1 ? 'Abstract' : 'Abstracts'}} - {{cluster}}</div>
-											<div class="panel-body">
-												<div class="row">
-													<div class="col-md-12" style="text-align:center">
-														Year
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-													<rzslider
-														rz-slider-model="slider.min"
-														rz-slider-high="slider.max"
-														rz-slider-options="slider.options"></rzslider>
-													</div>
-												</div>
-												<hr>
-												<div class="row">
-													<div class="col-md-12" style="height: 370px; overflow-y: scroll">
-														<div class="row" ng-repeat="item in displayAbstracts">
-															<div class="col-md-12"><h5>{{item.title}}</h5><p>{{item.abstractText | limitTo: 200}}{{item.abstractText.length > 200 ? '...' : ''}}</p><hr></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-							</uib-tab>
                             <uib-tab heading="Table">
                             </br>
                         	<div ng-show="search.tables.literature.data.length>0 && !search.tables.literature.has_errors">
@@ -485,6 +448,43 @@
                         </uib-alert>
                         
                         </uib-tab>
+							<uib-tab heading="Browser" ng-click="setLoaded()">
+								</br>	
+								<div class="row">
+									<div class="col-md-6">
+										<cttv-target-associations-foamtree tab="loaded" width="550" height="550" on-cell-select="selectedCell" cluster-data="clusterData" ></cttv-target-associations-foamtree>
+									</div>
+									<div class="col-md-6">
+										<div class="panel panel-default" style="width:100%; height:550px">
+											<div class="panel-heading">{{displayAbstracts.length}} {{displayAbstracts.length == 1 ? 'Abstract' : 'Abstracts'}} - {{cluster}}</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12" style="text-align:center">
+														Year
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+													<rzslider
+														rz-slider-model="slider.min"
+														rz-slider-high="slider.max"
+														rz-slider-options="slider.options"></rzslider>
+													</div>
+												</div>
+												<hr>
+												<div class="row">
+													<div class="col-md-12" style="height: 370px; overflow-y: scroll">
+														<div class="row" ng-repeat="item in displayAbstracts">
+															<div class="col-md-12"><h5>{{item.title}}</h5><p>{{item.abstractText | limitTo: 200}}{{item.abstractText.length > 200 ? '...' : ''}}</p><hr></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</uib-tab>
                         </uib-tabset>
 
                     </div uib-accordion-group>

@@ -96,6 +96,11 @@
         $scope.displayAbstracts = $scope.abstracts["All"];
         $scope.cluster = "All";
 
+        // Specifically for faomtree tab
+        $scope.setLoaded = function() {
+        	$scope.loaded = true;
+        }
+
 		$scope.slider = {
 				  min: 2000,
 				  max: 2016,
@@ -1879,7 +1884,7 @@
                     cttvAPIservice.defaultErrorHandler
                 );
         }
-
+        
         /**
          * Get the cluster information for the foamtree,
          */
