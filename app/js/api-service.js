@@ -37,6 +37,7 @@ angular.module('cttvServices')
             API_TARGET_URL : 'target',
             API_TARGET_RELATION_URL : 'targetRelation',
             API_DISEASE_RELATION_URL : 'diseaseRelation',
+            API_LOG_SESSION_URL : "logSession",
             facets: {
                 DATATYPE: 'datatype', // 'filterbydatatype',
                 PATHWAY: 'pathway', //filterbypathway',
@@ -139,8 +140,6 @@ angular.module('cttvServices')
 
 
             function done(response) {
-                // console.log("RESPONSE");
-                // console.log(response);
                 resolvePromise(response);
                 if (!$rootScope.$$phase) $rootScope.$apply();
             }
@@ -475,13 +474,23 @@ angular.module('cttvServices')
             });
         }
 
+        /**
+        * Logs a session event in the API
+        * This call is 1-off and it doesn't
+        */
+        cttvAPI.logSession = function () {
+            $log.log("cttvAPI.logSession");
 
+            return callAPI({
+                operation : cttvAPI.API_LOG_SESSION_URL,
+                params: {
+                    event: "appload"
+                }
+            });
+        };
 
         return cttvAPI;
     }])
-
-
-
 
 
 
