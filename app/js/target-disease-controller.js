@@ -96,7 +96,7 @@
         $scope.displayAbstracts = $scope.abstracts["All"];
         $scope.cluster = "All";
 
-        // Specifically for faomtree tab
+        // Specifically for foamtree tab
         $scope.setLoaded = function() {
         	$scope.loaded = true;
         }
