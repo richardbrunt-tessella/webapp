@@ -374,12 +374,29 @@ angular.module('cttvServices')
         */
         cttvAPI.getCluster = function(queryObject){
             $log.log("cttvAPI.getCluster " + queryObject.target_id + ", " + queryObject.code);
+            
+            // TODO: temporary solution to access real data, remove this when API is available
+            var	url = 'http://10.8.223.246:8008/api/latest/public/evidence/filter?disease=EFO_0003767&target=ENSG00000073756&datasource=europepmc&facets=True';
+            
+            var responsePromise = $http.get(url, null);
+            var deferred = $q.defer();
+            responsePromise.success(function(data) {
+
+              deferred.resolve(data);
+            });
+            responsePromise.error(function(status) {
+              deferred.reject(status);
+            });
+
+            return deferred.promise;
 
             // TODO: Change this to the cluster url
+            /*
             return callAPI({
                 operation: cttvAPI.API_ASSOCIATION_URL,
                 params: queryObject
             });
+            */
         };
 
         /**
@@ -389,12 +406,29 @@ angular.module('cttvServices')
         */
         cttvAPI.getAbstract = function(queryObject){
             $log.log("cttvAPI.getCluster " + queryObject.term);
+            
+            // TODO: temporary solution to access real data, remove this when API is available
+            var	url = 'http://10.8.223.246:8008/api/latest/public/evidence/filter?disease=EFO_0003767&target=ENSG00000073756&datasource=europepmc&facets=True&abstract=' + queryObject.abstract;
+            
+            var responsePromise = $http.get(url, null);
+            var deferred = $q.defer();
+            responsePromise.success(function(data) {
+
+              deferred.resolve(data);
+            });
+            responsePromise.error(function(status) {
+              deferred.reject(status);
+            });
+
+            return deferred.promise;
 
             // TODO: Change this to the abstract url
+            /*
             return callAPI({
                 operation: cttvAPI.API_ASSOCIATION_URL,
                 params: queryObject
             });
+            */
         };
 
 

@@ -404,7 +404,7 @@
 										</div>
 										<div class="row">
 											<div class="col-md-12">
-											<rzslider
+											<rzslider 
 												rz-slider-model="slider.min"
 												rz-slider-high="slider.max"
 												rz-slider-options="slider.options"></rzslider>
@@ -414,7 +414,7 @@
 										<div class="row">
 											<div class="col-md-12" style="height: 430px; overflow-y: scroll">
 												<div class="row" ng-repeat="item in displayAbstracts">
-													<div class="col-md-12"><h5><a href="">{{item.title}}</a></h5><p>{{item.abstractText | limitTo: 200}}{{item.abstractText.length > 200 ? '...' : ''}}</p><hr></div>
+													<div class="col-md-12"><h5><a ng-href="{{item.evidence.literature_ref.lit_id}}" target="_blank">{{item.literature.title}}</a></h5><p>{{item.literature.abstract | limitTo: 200}}{{item.literature.abstract.length > 200 ? '...' : ''}}</p><hr></div>
 												</div>
 											</div>
 										</div>
