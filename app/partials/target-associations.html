@@ -28,7 +28,6 @@
                 </div>
 
                 <div class="col-md-9">
-
                     <!-- TABS views -->
 
                     <!-- Nav tabs -->
@@ -36,6 +35,7 @@
                         <li role="presentation" ng-class="(view.t[0]=='bubbles') ? 'active' : ''" ><a href="#" ng-click='setActiveTab("bubbles")'>Bubbles</a></li>
                         <li role="presentation" ng-class="(view.t[0]=='table') ? 'active' : ''"><a href="#" ng-click='setActiveTab("table")'>Table</a></li>
                         <li role="presentation" ng-class="(view.t[0]=='tree') ? 'active' : ''"><a href="#" ng-click='setActiveTab("tree")'>Tree</a></li>
+                        <li role="presentation" ng-class="(view.t[0]=='foamtree') ? 'active': ''"><a href="#" ng-click='setActiveTab("foamtree")'>FoamTree</a></li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -56,9 +56,12 @@
                         <div class="tab-pane ng-scope" ng-class="{active: view.t[0]=='tree'}">
                             <cttv-target-associations-tree target="{{search.query}}" facets="filters" active="{{view.t[0]}}"></cttv-target-associations-tree>
                         </div>
+
+                        <!-- foamtree -->
+                        <div class="tab-pane ng-scope" ng-class="{active: view.t[0]=='foamtree'}">
+                            <cttv-target-associations-foamtree width="550" height="550" target="{{search.query}}" active={{view.t[0]}}></cttv-target-associations-foamtree>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
