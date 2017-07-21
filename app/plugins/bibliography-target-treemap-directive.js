@@ -655,20 +655,20 @@ angular.module('plugins')
                  */
                 scope.onres = function(r){
                     // $log.log(' > onres : ', r);
+                    if( r.w != width ){
+                        width = r.w;
+                        resetScales();
 
-                    width = r.w;
-                    resetScales();
+                        d3.select( s ).attr("width", width);
+                        nav.select("rect").attr("width", width);
+                        chart.attr("width", width);
 
-                    d3.select( s ).attr("width", width);
-                    nav.select("rect").attr("width", width);
-                    chart.attr("width", width);
+                        treemap.size([width/ratio, height]);
+                        updateTreemap();
 
-                    treemap.size([width/ratio, height]);
-                    updateTreemap();
-
-                    chart.selectAll("g").remove();
-                    g1 = display(hobj);
-
+                        chart.selectAll("g").remove();
+                        g1 = display(hobj);
+                    }
                 }
 
 
