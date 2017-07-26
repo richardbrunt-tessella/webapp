@@ -105,6 +105,12 @@ angular.module('plugins')
 
                     s = elem.children().eq(0).children().eq(1)[0];
 
+                    $log.log("s ", s);
+                    for(var l=0; l<3; l++){
+                        $log.log( elem.children().eq(0).children().eq(l)[0] );
+                    }
+
+
                     svg = d3.select( s )
                         .attr("width", width)
                         .attr("height", (height + margin.top))
@@ -323,9 +329,19 @@ angular.module('plugins')
                  */
                 function onAggsData(data){
 
+                    scope.aggs = data.aggregations;
+                    scope.selectedagg = scope.selectedagg || _.keys(scope.aggs)[0];
+
+                    // JUST FOR TESTING
+                    onSelectAggsData();
+                }
+
+
+
+                function onSelectAggsData(){
                     //var children = data.aggregations.abstract_significant_terms.buckets.filter(function(b){
                     //var children = data.aggregations.top_chunks_significant_terms.buckets.filter(function(b){
-                    var children = data.aggregations.keywords_significant_terms.buckets.filter(function(b){
+                    var children = scope.aggs[scope.selectedagg].buckets.filter(function(b){
                         /*
                         don't add these to the treemap if they appears in the "selected" array (i.e. those we clicked on)
                         or in the symbol synonyms
@@ -339,8 +355,6 @@ angular.module('plugins')
                         // filter: case insensitive
                         return selected.filter(function(a){return a.toLowerCase()==b.key.toLowerCase()}).length==0   &&   scope.target.symbol_synonyms.filter(function(a){return a.toLowerCase()==b.key.toLowerCase()}).length==0;
                     });
-
-                    //$log.log(" > children : ", children);
 
                     scope.aggs_result_total = children.length;
 
@@ -648,6 +662,8 @@ angular.module('plugins')
 
                 scope.getMoreData = getMoreData;
 
+                scope.selectedagg;
+
 
 
                 /*
@@ -672,7 +688,9 @@ angular.module('plugins')
                 }
 
 
-
+                scope.$watch('selectedagg', function(newValue, oldValue) {
+                    onSelectAggsData();
+                });
                 /*
                 var bibliography = _.filter(scope.target.dbxrefs, function (t) {
                     return t.match(/^PubMed/);

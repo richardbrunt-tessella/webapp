@@ -1,9 +1,12 @@
 <div style="position:relative;">
     <cttv-page-progress-spinner isloading="isloading"></cttv-page-progress-spinner>
 
+
     <svg style="background:#ccc"></svg>
     <div ng-show="aggs_result_total==0" style="text-align:center; background:#ccc; padding:15px; border:1px solid #fff; margin-top:-3px">No further terms found</div>
     <cttv-size-listener onresize="onres"></cttv-size-listener>
+
+    <select ng-model="selectedagg" ng-options="key as key for (key,value) in aggs"></select>
 
     <div>
         <p ng-show="noftotal && hits[0].total">Showing {{noftotal}} of {{hits[0].total}} results</p>
