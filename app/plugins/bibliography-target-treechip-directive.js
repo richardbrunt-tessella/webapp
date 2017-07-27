@@ -107,13 +107,21 @@ angular.module('plugins')
                     */
 
                     // search ?
-                    // selected = selected || [scope.target.approved_symbol]; //.toLowerCase()];
-                    selected = [scope.target.approved_symbol];
+                    selected = [];
+                    resetSelected();
                     scope.selected = selected;
                     scope.onremove = onRemove;
                     getData();
 
                 })
+
+
+
+                function resetSelected(){
+                    // selected = selected || [scope.target.approved_symbol]; //.toLowerCase()];
+                    selected.length = 0;
+                    selected.push(scope.target.approved_symbol);
+                }
 
 
 
@@ -128,7 +136,7 @@ angular.module('plugins')
 
 
                 function cleanSpaces(input) {
-                    return input.replace(/ /g,'_');
+                    return input.toString().replace(/ /g,'_');
                 }
 
 
@@ -296,22 +304,31 @@ angular.module('plugins')
                  * Handler for the aggregations data for the treemap
                  */
                 function onAggsData(data){
+                    scope.aggs = data.aggregations;
+                    scope.selectedagg = scope.selectedagg || scope.aggtype[0].id || _.keys(scope.aggs)[0];
 
+                    onSelectAggsData();
+                }
+
+
+
+                function onSelectAggsData(){
                     //var children = data.aggregations.abstract_significant_terms.buckets.filter(function(b){
                     //var children = data.aggregations.top_chunks_significant_terms.buckets.filter(function(b){
-                    var children = data.aggregations.keywords_significant_terms.buckets.filter(function(b){
-                        /*
-                        don't add these to the treemap if they appears in the "selected" array (i.e. those we clicked on)
-                        or in the symbol synonyms
-                        */
+                    var children = scope.aggs[scope.selectedagg].buckets.filter(function(b){
 
-                        //return !selected.includes(b.key.toLowerCase());
+                        //
+                        // don't add these to the treemap if they appears in the "selected" array (i.e. those we clicked on) or in the symbol synonyms
+                        //
+
+                        // no filtering
+                        // return !selected.includes(b.key.toLowerCase());
 
                         // filter: case sensitive
                         // return !selected.includes(b.key) && !scope.target.symbol_synonyms.includes(b.key);
 
                         // filter: case insensitive
-                        return selected.filter(function(a){return a.toLowerCase()==b.key.toLowerCase()}).length==0   &&   scope.target.symbol_synonyms.filter(function(a){return a.toLowerCase()==b.key.toLowerCase()}).length==0;
+                        return selected.filter(function(a){return a.toLowerCase()== b.key.toString().toLowerCase()}).length==0   &&   scope.target.symbol_synonyms.filter(function(a){return a.toLowerCase()==b.key.toString().toLowerCase()}).length==0;
                     });
 
 
@@ -620,6 +637,18 @@ angular.module('plugins')
 
                 scope.getMoreData = getMoreData;
 
+                scope.selectedagg;
+
+                scope.aggtype = [
+                    {id:"keywords_significant_terms", label:"keywords"},
+                    {id:"top_chunks_significant_terms", label:"top chunks"},
+                    {id:"mesh_headings_label_significant_terms", label:"mesh headings label"},
+                    {id:"chemicals_name_significant_terms", label:"chemicals name"},
+                    {id:"journal_abbr_significant_terms", label:"journal abbr"},
+                    {id:"authors_significant_terms", label:"authors"},
+                    //{id:"pub_date_histogram", label:"publication date"},
+                ]
+
 
 
                 /*
@@ -653,6 +682,15 @@ angular.module('plugins')
                     }
 
                 }
+
+
+
+                scope.$watch('selectedagg', function(newValue, oldValue) {
+                    if(newValue !== oldValue){
+                        resetSelected();
+                        onSelectAggsData();
+                    }
+                });
 
 
 

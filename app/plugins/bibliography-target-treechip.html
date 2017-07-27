@@ -9,6 +9,8 @@
 
     <cttv-size-listener onresize="onres"></cttv-size-listener>
 
+    <select ng-model="selectedagg" ng-options="value.id as value.label for value in aggtype"></select>
+
     <div>
         <p ng-show="noftotal && hits[0].total">Showing {{noftotal}} of {{hits[0].total}} results</p>
 
