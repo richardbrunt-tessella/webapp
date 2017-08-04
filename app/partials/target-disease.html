@@ -13,48 +13,37 @@
     <div class="container">
         <div class="row gene-disease-header">
 
-            <div class="col-sm-3">
-                <cttv-gene-disease-association target="{{search.target}}" disease="{{search.disease}}" width="180" height="180" association-data="search.flower_data"></cttv-gene-disease-association>
+            <div class="col-sm-4">
+                <!-- Gene Info -->
+                <a href="/target/{{search.info.gene.ensembl_gene_id}}">
+                    <h5>
+                        {{search.info.gene.approved_symbol || search.info.gene.ensembl_external_name}}<br />
+                        <span class="small">{{search.info.gene.approved_name || search.info.gene.ensembl_description}}
+                            <!-- <br/ >({{search.info.gene.id || search.info.gene.ensembl_gene_id}}) -->
+                            <span ng-show="search.info.gene.symbol_synonyms.length>0"><br />Synonyms: {{search.info.gene.symbol_synonyms.join(", ") | limitTo:100}}<span ng-show="search.info.gene.symbol_synonyms.join(', ').length>100">&hellip;</span></span>
+                        </span>
+                    </h5>
+                    <!-- The actual content paragraph -->
+                    <p class="small">{{search.info.gene.uniprot_function[0] | limitTo: 200}}<span ng-show="search.info.gene.uniprot_function[0].length>200">&hellip;</span></p>
+                </a>
             </div>
 
-            <div class="col-sm-9">
+            <div class="col-sm-4" style="text-align:center">
+                <cttv-gene-disease-association target="{{search.target}}" disease="{{search.disease}}" width="240" height="240" association-data="search.flower_data"></cttv-gene-disease-association>
+            </div>
+
+            <div class="col-sm-4">
 
                 <div class="overview">
 
-                    <!-- Gene Info -->
-                    <div class="item">
-                        <a href="/target/{{search.info.gene.ensembl_gene_id}}">
-                            <div class="well well-lg">
-                                <h5>
-                                    {{search.info.gene.approved_symbol || search.info.gene.ensembl_external_name}}<br />
-                                    <span class="small">{{search.info.gene.approved_name || search.info.gene.ensembl_description}}
-                                        <!-- <br/ >({{search.info.gene.id || search.info.gene.ensembl_gene_id}}) -->
-                                        <span ng-show="search.info.gene.symbol_synonyms.length>0"><br />Synonyms: {{search.info.gene.symbol_synonyms.join(", ") | limitTo:100}}<span ng-show="search.info.gene.symbol_synonyms.join(', ').length>100">&hellip;</span></span>
-                                    </span>
-                                </h5>
-                                <!-- The actual content paragraph -->
-                                <p class="small">{{search.info.gene.uniprot_function[0] | limitTo: 200}}<span ng-show="search.info.gene.uniprot_function[0].length>200">&hellip;</span></p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Divider -->
-                    <div class="association">
-                        <div></div>
-                    </div>
-
                     <!-- Disease Info -->
-                    <div class="item">
-                        <a href="/disease/{{search.info.efo.efo_code}}">
-                            <div class="well well-lg">
-                                <h5>
-                                    {{search.info.efo.label}}
-                                    <span class="small" ng-show="search.info.efo.efo_synonyms.length>0"><br />Synonyms: {{search.info.efo.efo_synonyms.join(", ") | limitTo:100}}<span ng-show="search.info.efo.efo_synonyms.join(', ').length>100">&hellip;</span></span>
-                                </h5>
-                                <p class="small">{{search.info.efo.definition | limitTo: 200}}<span ng-show="search.info.efo.definition.length>200">&hellip;</span></p>
-                            </div>
-                        </a>
-                    </div>
+                    <a href="/disease/{{search.info.efo.efo_code}}">
+                        <h5>
+                            {{search.info.efo.label}}
+                            <span class="small" ng-show="search.info.efo.efo_synonyms.length>0"><br />Synonyms: {{search.info.efo.efo_synonyms.join(", ") | limitTo:100}}<span ng-show="search.info.efo.efo_synonyms.join(', ').length>100">&hellip;</span></span>
+                        </h5>
+                        <p class="small">{{search.info.efo.definition | limitTo: 200}}<span ng-show="search.info.efo.definition.length>200">&hellip;</span></p>
+                    </a>
 
                 </div>
             </div>

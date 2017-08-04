@@ -85,11 +85,13 @@ angular.module('cttvDirectives', [])
                 //var flower = flowerView().values(scope.associationData);
                 //flower(elem[0]);
 
+                var w = attrs.width || 200;
+
                 scope.render = function(data){
                     if(data.length>0){
                         var flower = flowerView()
                             .values(data)
-                            .diagonal(200);
+                            .diagonal(w);
                         flower(elem[0]);
                     }
                 };
