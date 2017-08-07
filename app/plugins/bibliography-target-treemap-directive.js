@@ -57,7 +57,7 @@ angular.module('plugins')
 
 
 
-                var API_URL = "https://qkorhkwgf1.execute-api.eu-west-1.amazonaws.com/dev/search";
+                var API_URL = "https://vy36p7a9ld.execute-api.eu-west-1.amazonaws.com/dev/search"; // "https://qkorhkwgf1.execute-api.eu-west-1.amazonaws.com/dev/search";
 
                 var t0;
                 var ratio = 2;  // this is to make the cells more "horizontal"

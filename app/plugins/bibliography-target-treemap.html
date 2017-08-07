@@ -22,7 +22,10 @@
                 </div>
                 <div class="epmc_citation_subdata">
                     <div class="epmc_citation_authors">
-                        <span ng-repeat="auth in hit._source.authors"><a ng-href='https://europepmc.org/search?query=AUTH:"{{auth.full_name}}"&page=1'>{{auth.short_name}}</a><span ng-if="!$last">, </span></span>
+                        <!-- <span ng-repeat="auth in hit._source.authors"><a ng-href='https://europepmc.org/search?query=AUTH:"{{auth.full_name}}"&page=1'>{{auth.short_name}}</a><span ng-if="!$last">, </span></span> -->
+
+                        <span ng-repeat="auth in hit._source.authors"><a ng-href='https://europepmc.org/search?query=AUTH:"{{auth.ForeName+" "+auth.LastName}}"&page=1'>{{auth.ForeName+" "+auth.LastName}}</a><span ng-if="!$last">, </span></span>
+
                     <!-- </div>
 
                     <div class="epmc_citation_journal"> -->
