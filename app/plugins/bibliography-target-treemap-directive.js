@@ -445,7 +445,7 @@ angular.module('plugins')
                         .on("click", onBack)
                         .classed("tm-nav-hidden", selected.length==0 )
                         .select("text")
-                        .text( selected.join(" > ") );
+                        .text( selected.slice(1).join(" > ") ); // omit the first term
                 }
 
 
