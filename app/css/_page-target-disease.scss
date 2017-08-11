@@ -52,3 +52,36 @@
 #literature-table a {
     cursor: pointer;
 }
+
+
+.evidence-overview {
+    .evidence-overview-item{
+        height: 260px;
+    }
+
+    .v-middle {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+.evidence-section{
+    margin-bottom: 100px;
+
+    .evidence-section-overview{
+        margin-bottom:20px;
+    }
+
+    /*h4{
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd;
+    }*/
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
