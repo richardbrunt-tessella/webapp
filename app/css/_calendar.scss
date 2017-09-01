@@ -1,40 +1,40 @@
 @mixin vertical-centre ($height) {
-  display:inline-block;
-  height:$height;
-  line-height:$height !important;
-  vertical-align:middle;
+  display: inline-block;
+  height: $height;
+  line-height: $height !important;
+  vertical-align: middle;
 }
 
 @mixin border-box {
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-$border-colour:#ccc;
+$border-colour: #ccc;
 
 ot-calendar {
-  background:white;
-  border:solid 1px $border-colour;
-  display:block;
-  float:left;
-  margin-bottom:10px;
+  background: white;
+  border: solid 1px $border-colour;
+  display: block;
+  float: left;
+  margin-bottom: 10px;
   //width:300px;
   max-width: 300px;
   min-width: 200px;
   width: 100%;
   @include border-box;
 
-  $secondary-colour:#2875c7;
-  $spacing:10px;
-  $icon-width:40px;
-  $header-height:40px;
+  $secondary-colour: #2875c7;
+  $spacing: 10px;
+  $icon-width: 40px;
+  $header-height: 40px;
 
   >div.header {
-    background:$secondary-colour;
-    color:white;
-    float:left;
-    height:$header-height;
-    width:100%;
+    background: $secondary-colour;
+    color: white;
+    float: left;
+    height: $header-height;
+    width: 100%;
 
     >* {
       @include vertical-centre($header-height);
@@ -42,85 +42,85 @@ ot-calendar {
     }
 
     >i {
-      cursor:pointer;
-      float:left;
-      font-size:1.125em;
-      font-weight:bold;
-      padding:0 $spacing;
-      position:relative;
-      width:$icon-width;
+      cursor: pointer;
+      float: left;
+      font-size: 1.125em;
+      font-weight: bold;
+      padding: 0 $spacing;
+      position: relative;
+      width: $icon-width;
       @include border-box;
     }
 
     >i.fa-angle-left {
-      text-align:left;
+      text-align: left;
     }
 
     >i.fa-angle-right {
-      margin-left:$icon-width*-1;
-      text-align:right;
+      margin-left: $icon-width*-1;
+      text-align: right;
     }
 
     >span {
-      color:inherit;
-      float:left;
-      font-weight:bold;
-      margin-left:$icon-width*-1;
-      padding-left:$icon-width+$spacing;
-      padding-right:$icon-width;
-      text-align:center;
-      text-transform:uppercase;
-      width:100%;
+      color: inherit;
+      float: left;
+      font-weight: bold;
+      margin-left: $icon-width*-1;
+      padding-left: $icon-width+$spacing;
+      padding-right: $icon-width;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
       @include border-box;
     }
   }
 
   >div.week {
-    border-top:solid 1px $border-colour;
-    float:left;
-    width:100%;
+    border-top: solid 1px $border-colour;
+    float: left;
+    width: 100%;
 
     &:first-child {
-      border-top:none;
+      border-top: none;
     }
 
     >span.day {
-      background:white;
-      border-left:solid 1px $border-colour;
+      background: white;
+      border-left: solid 1px $border-colour;
       color:black;
-      cursor:pointer;
-      float:left;
-      font-size:0.75em;
-      text-align:center;
-      width:14.285715%; // 100/7
+      cursor: pointer;
+      float: left;
+      font-size: 0.75em;
+      text-align: center;
+      width: 14.285715%; // 100/7
       @include border-box;
       @include vertical-centre(30px);
 
       &:first-child {
-        border-left:none;
+        border-left: none;
       }
 
       &.event {
-        background:#ffe6e6;
+        background: #ffe6e6;
       }
 
       &.today {
-        background:#e3f2ff;
+        background: #e3f2ff;
       }
 
       &.different-month {
-        color:#c0c0c0;
+        color: #c0c0c0;
       }
 
       &.selected {
-        background:$secondary-colour;
-        color:white;
+        background: $secondary-colour;
+        color: white;
       }
     }
 
     &.names>span {
-      color:$secondary-colour;
-      font-weight:bold;
+      color: $secondary-colour;
+      font-weight: bold;
     }
   }
 }

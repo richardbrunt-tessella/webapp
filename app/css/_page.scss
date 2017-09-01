@@ -8,12 +8,13 @@
 
 
 
-html, body {
-  height:100%;
+html,
+body {
+  height: 100%;
   line-height: 1.35;
 }
 
-body{
+body {
   background: $body-background;
   color: $clr-text;
 }
@@ -57,14 +58,14 @@ body{
 
 .ot-main-container {
   background: $primary-background-color;
-  padding-bottom:70px;
-  padding-bottom:320px;
-  width:100%;
+  padding-bottom: 70px;
+  padding-bottom: 320px;
+  width: 100%;
 }
 
 .ot-page-wrapper {
-  min-height:100%;
-  position:relative;
+  min-height: 100%;
+  position: relative;
 }
 
 
@@ -87,13 +88,13 @@ body{
   height: auto;
 
   position: relative;
-  width:100%;
+  width: 100%;
 
   // box-shadow: 0 1px 5px 0 $clr-ui-shadow;
   z-index: 10; // this will need some sort of variable presumably?
 
 
-  .container{
+  .container {
     height: auto;
   }
 
@@ -112,7 +113,8 @@ body{
   width: 195px;
 }
 
-.ot_logo_graphics, .ot_logo_type{
+.ot_logo_graphics,
+.ot_logo_type {
   float:left;
   height: 30px;
   overflow: hidden;
@@ -122,10 +124,10 @@ body{
   width: 30px;
 }
 
-.ot_logo_type{
+.ot_logo_type {
   width: 165px;
 
-  img{
+  img {
     left: -30px;
     position: relative;
   }
@@ -166,7 +168,7 @@ body{
     display: inline-block;
 
     >div {
-      &.open{
+      &.open {
         background: $clr-ui-background-secondary;
       }
 
@@ -236,10 +238,10 @@ body{
 
 
 .notification {
-  color:white;
+  color: white;
   font-size:19px;
   margin: 12px 7px;
-  position:relative;
+  position: relative;
 
   // float: right;
   // margin-top:10px;
@@ -247,22 +249,22 @@ body{
   // width:50px;
 
   .counter {
-    background:red;
+    background: red;
     border-radius:50%;
     color: white;
-    font-size:10px;
-    height:14px;
-    pointer-events:none;
-    position:absolute;
+    font-size: 10px;
+    height: 14px;
+    pointer-events: none;
+    position: absolute;
     //left:39px;
     right: -5px;
-    text-align:center;
-    top:0px;
-    width:14px;
+    text-align: center;
+    top: 0px;
+    width: 14px;
   }
 
   >i {
-    cursor:pointer;
+    cursor: pointer;
   }
 }
 
@@ -277,28 +279,28 @@ body{
  * Masthead search
  */
 
-.masthead-search-container{
+.masthead-search-container {
   max-width:35%;
   //padding-left: 8px;
 }
 
-.masthead-search-menu{
+.masthead-search-menu {
   padding-left: 7px
 }
 
-.masthead-responsive-search{
+.masthead-responsive-search {
   cursor: pointer;
   height: 50px;
   padding: 14px 7px;
   padding-right: 0px;
 }
 
-.masthead-responsive-search-icon{
+.masthead-responsive-search-icon {
   color: #fff;
   //font-size: 19px;
 }
 
-.masthead-responsive-search-panel{
+.masthead-responsive-search-panel {
   height: 50px;
   margin: 0px 15px;
   min-width: 290px;
@@ -324,13 +326,13 @@ body{
   color: $footer-text;
   font-size: 14px;
   font-weight: 300;
-  height:320px;
-  left:0;
+  height: 320px;
+  left: 0;
 
   overflow: hidden;
   padding: 24px 0;
-  position:absolute;
-  width:100%;
+  position: absolute;
+  width: 100%;
 
   a{
     color: inherit;
@@ -375,18 +377,18 @@ body{
 }
 
 /* define the container for an angular partial*/
-.partial-page{
+.partial-page {
   padding-bottom: 40px;
-  position:relative;
+  position: relative;
 }
 
 
 
 
 /* non-breaking block */
-.nbblock{
-  display:block;
-  margin-bottom:0px;
+.nbblock {
+  display: block;
+  margin-bottom: 0px;
   margin-top: 10px;
 }
 
@@ -469,7 +471,7 @@ body{
  */
 .ot-social-panel {
   border-top: 1px solid #fff;
-  box-shadow: 0 0 6px 1px rgba(0,0,0,.2);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
 
   cursor: pointer;
   min-height: 90px;
@@ -497,7 +499,7 @@ body{
     background: $secondary-color;
     color: #fff;
     min-height: 30px;
-    min-width:90px;
+    min-width: 90px;
     padding: 7px 0px 5px 0px;
     position: absolute;
     right: 0px;
@@ -512,7 +514,7 @@ body{
 /*
  * The linkedin icon block
  */
-.ot-social-panel-linkedin{
+.ot-social-panel-linkedin {
   background: #0077b5;
 
   &:after {
@@ -520,7 +522,7 @@ body{
   };
 }
 
-.ot-social-panel-twitter{
+.ot-social-panel-twitter {
   background: #00aced;
 
   &:after {
@@ -528,7 +530,7 @@ body{
   };
 }
 
-.ot-social-panel-facebook{
+.ot-social-panel-facebook {
   background: #4867aa;
 
   &:after {
@@ -552,12 +554,12 @@ body{
 
 
 .main-alert-container {
-  .alert{
+  .alert {
     margin-top: 20px;
   }
 
-  .row>div{
+  .row>div {
     /* reset the min height of columns */
-    min-height:0px;
+    min-height: 0px;
   }
 }

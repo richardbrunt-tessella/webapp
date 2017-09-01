@@ -1,12 +1,12 @@
 
-.search-form{
+.search-form {
   margin: 0px auto;
   max-width: 600px;
-  position:relative;
+  position: relative;
 }
 
 
-.input-search{
+.input-search {
   border: 1px solid #ccc;
   box-shadow: none;
 
@@ -20,7 +20,7 @@
 }
 
 
-.btn-search{
+.btn-search {
   background-color: #fff;
   //border: none;
   //color: $secondary-color;
@@ -30,7 +30,7 @@
   color: #1e5799;
 }
 
-.btn-search:hover{
+.btn-search:hover {
   color: $secondary-color;
 }
 
@@ -38,7 +38,7 @@
 .search-form-spinner {
   line-height: inherit;   /* to override bootstrap form feedback */
   padding: 8px 0px;
-  right:40px;
+  right: 40px;
 
 }
 
@@ -46,7 +46,7 @@
   padding: 4px 0px;
 }
 
-.search-suggestions-box{
+.search-suggestions-box {
   background: $primary-background-color;
   background-clip: padding-box;
 
@@ -66,55 +66,55 @@
   @include box-shadow( 0 5px 10px $clr-ui-shadow );
 
 
-  .divider{
+  .divider {
     border-top: 1px solid #ccc;
     margin: 10px 0px;
   }
 
-  .item:hover{
+  .item:hover {
     background: $clr-ui-background-secondary; //#EEE;
     cursor: pointer;
   }
 
-  .besthit{
-    cursor:pointer;
-    padding:4px 0px;
+  .besthit {
+    cursor: pointer;
+    padding: 4px 0px;
   }
 
-  .text-item{
-    padding:0px 5px;
+  .text-item {
+    padding: 0px 5px;
   }
 
 
 
-  .result-item{
-    margin:0;
-    padding:4px 5px;
+  .result-item {
+    margin: 0;
+    padding: 4px 5px;
   }
 
   .suggestions-targets {
-    .suggestions-targets-item{
+    .suggestions-targets-item {
       max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
 
-      span:first-child{
-        padding-right:7px;
+      span:first-child {
+        padding-right: 7px;
       }
     }
   }
 
   .suggestions-efo {
-    .suggestions-efo-title{
+    .suggestions-efo-title {
       line-height: 1.1;
     }
 
-    .suggestions-efo-hierarchy-arrow{
+    .suggestions-efo-hierarchy-arrow {
       margin:0px 4px;
     }
 
-    .suggestions-efo-hierarchy-label{
+    .suggestions-efo-hierarchy-label {
       display: inline-block;
       max-width: 28%;
       overflow: hidden;

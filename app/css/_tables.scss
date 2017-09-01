@@ -9,8 +9,8 @@
 
 /* wrapper for bootstrap overrides */
 #ot-page-app {
-  table.dataTable thead > tr > th{
-    padding-left: 8px ;
+  table.dataTable thead > tr > th {
+    padding-left: 8px;
     /*padding-right: 8px ;*/
   }
 
@@ -22,7 +22,8 @@
         background-position-y: bottom ;*/
   }
 
-  .ot-access-public, .ot-access-private {
+  .ot-access-public,
+  .ot-access-private {
     background-color: #ccc;
     border-radius: 8px;
     color: #fff;
@@ -55,19 +56,21 @@
   }
 
 
-  .sorting::after, .sorting_asc::after, .sorting_desc::after {
+  .sorting::after,
+  .sorting_asc::after,
+  .sorting_desc::after {
     bottom: 5px;
     color: #ddd;
     //left: 50%;
     content: '\f0dc';
     font-family: 'FontAwesome';
-    font-size:12px;
+    font-size: 12px;
     opacity: 1;
     right: 6px;
     @include transition( color 0.3s );
   }
 
-  .sorting_asc::after{
+  .sorting_asc::after {
     color: $clr-ui-selected;
     content: '\f0de';
   }
@@ -96,8 +99,8 @@
       font-size: 16px;
       font-weight: 300;
       line-height: 15px;
-      padding: 6px ;
-      padding-right: 26px ;
+      padding: 6px;
+      padding-right: 26px;
     }
 
     thead th:last-child {
@@ -109,11 +112,11 @@
 
       tr td {
         line-height: 14px;
-        padding: 8px 8px 16px 8px ;   /* allow extra padding at the bottom of each row */
+        padding: 8px 8px 16px 8px;   /* allow extra padding at the bottom of each row */
       }
     }
 
-    .badge{
+    .badge {
       background: #ddd;
       color: #777;
     }
@@ -126,13 +129,13 @@
 
 
   .ot-publications-string {
-    white-space:nowrap;
+    white-space: nowrap;
   }
 
 
-  a.dt-button{
-    font-size: 16px ;
-    padding: 2px 7px ;
+  a.dt-button {
+    font-size: 16px;
+    padding: 2px 7px;
   }
 
 
@@ -152,19 +155,19 @@
 
     thead {
       > tr {
-        margin-bottom: 10px ;
+        margin-bottom: 10px;
 
         > th {
           /*white-space: nowrap;*/
-          background-position: center bottom 5px ;
-          border: none ;
+          background-position: center bottom 5px;
+          border: none;
           font-size: 12px;
           font-weight: 400;
           height:140px;
           line-height: 11px;
           min-width: 30px;
-          padding: 5px ;
-          padding-left: 0 ;
+          padding: 5px;
+          padding-left: 0;
           width: 7%; //48px; /*5%;*/
           /*vertical-align: middle ;*/
 
@@ -185,11 +188,11 @@
           }
 
           &:hover {
-            background-color: rgba(210,210,210,0.2);    /* values to match F4F4F4 */
+            background-color: rgba(210, 210, 210, 0.2);    /* values to match F4F4F4 */
           }
 
           &:first-child {
-            background-position: right 5px bottom 5px ;
+            background-position: right 5px bottom 5px;
             padding-right: 5px;
             width: auto;
 
@@ -204,7 +207,7 @@
           }
 
           &:last-child {
-            background-position: left 5px bottom 5px ;
+            background-position: left 5px bottom 5px;
             padding-left: 5px;
             width: auto;
 
@@ -223,7 +226,7 @@
             margin-bottom: 20px;
             vertical-align: top;
 
-            > span{
+            > span {
               display: block;
               margin-left: 50%;
               width: 140px;
@@ -245,7 +248,7 @@
         line-height: 12px;
         overflow: hidden;
         padding: 0;
-        padding-bottom: 0 ;
+        padding-bottom: 0;
         text-overflow: ellipsis;
 
         white-space: nowrap;
@@ -259,7 +262,7 @@
         &:first-child {
           border: none;
           overflow: hidden;
-          padding-right: 5px ;
+          padding-right: 5px;
           text-align: right;
           vertical-align: middle;
 
@@ -284,8 +287,8 @@
         }
       }
 
-      &:hover{
-        text-decoration:none;
+      &:hover {
+        text-decoration: none;
       }
 
       > tr:hover {
@@ -298,33 +301,37 @@
 
 
 
-  .matrix-table span.no-data, .matrix-legend span.no-data{
+  .matrix-table span.no-data,
+  .matrix-legend span.no-data {
     background: #fff;
     border: 1px solid #eee;
     color: #fff;
   }
 
-  .matrix-table span.zero-score, .matrix-legend span.zero-score{
+  .matrix-table span.zero-score,
+  .matrix-legend span.zero-score {
     background: #eef5fb;
     border: 1px solid #eee;
     color: #eef5fb;
   }
 
-  .matrix-table span.value-0, .matrix-legend span.value-0 {
+  .matrix-table span.value-0,
+  .matrix-legend span.value-0 {
     background: #eee;
     color: #eee;
   }
 
 
 
-  .matrix-legend, .matrix-legend-info{
+  .matrix-legend,
+  .matrix-legend-info {
     /* Do one for horizontal layout */
     font-size: 12px;
     margin: 5px;
   }
 
   .matrix-legend-layout-h span {
-    float:left;
+    float: left;
   }
 
   span.matrix-legend-from {
@@ -334,7 +341,7 @@
 
   span.matrix-legend-to {
     padding-left: 5px;
-    padding-top: 2px
+    padding-top: 2px;
   }
 
   span.matrix-legend-text {
@@ -342,34 +349,34 @@
   }
 
   span.matrix-legend-item {
-    display:block;
+    display: block;
     /*border: 1px solid #FFF;*/
   }
 
   span.matrix-legend-background {
-    display:block;
-    height:20px;
-    width:20px;
+    display: block;
+    height: 20px;
+    width: 20px;
   }
 
   span.matrix-legend-background-label {
-    display:block;
+    display: block;
   }
 
   .matrix-legend-layout-v .matrix-legend-item {
     /*width: inherit;*/
 
     > span {
-      float:left;
+      float: left;
     }
   }
 
-  .matrix-legend-info span{
-    padding-right:5px;
+  .matrix-legend-info span {
+    padding-right: 5px;
   }
 
   ot-target-associations-tree .legendBox {
-    border: none ;
+    border: none;
   }
 
 
@@ -382,12 +389,12 @@
   /* Fix for the new DataTables styling */
   ot-hpa-tissue-expression table.matrix-table thead > tr > th:last-child,
   ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child,
-  ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child:hover  {
+  ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child:hover {
     /* display: none ; */
     visibility: hidden;
   }
 
-  ot-hpa-tissue-expression table.matrix-table thead > tr > th:first-child{
+  ot-hpa-tissue-expression table.matrix-table thead > tr > th:first-child {
     > div {
       > span {
         margin-left: 92.5%;
@@ -412,7 +419,7 @@
 
 
 
-  .scroll-table-panel .table-panel{
+  .scroll-table-panel .table-panel {
     overflow-x: auto;
   }
 

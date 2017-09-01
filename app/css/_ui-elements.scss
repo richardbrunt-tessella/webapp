@@ -41,11 +41,12 @@
   .variantStructureModalWindow .modal-dialog {
     width: 450px;
 
-    .snpLegend, .snpHeader {
+    .snpLegend,
+    .snpHeader {
       margin-left: 20px;
 
       .pdbLink {
-        float:right;
+        float: right;
         margin-right: 10px;
       }
 
@@ -53,9 +54,9 @@
         background: orange;
         border-radius: 5px;
         display: inline-block;
-        height:10px;
+        height: 10px;
         margin-right: 10px;
-        width:10px;
+        width: 10px;
       }
     }
   }
@@ -69,15 +70,15 @@
     background-color: $clr-ui-lightbox-w;
     height: 100%;
     left: 0px;
-    padding-top:150px;
+    padding-top: 150px;
     position: absolute;
-    text-align:center;
-    width:100%;
+    text-align: center;
+    width: 100%;
     z-index: 1000;
   }
 
   .ot-progress-spinner-svg-container {
-    display:inline-block;
+    display: inline-block;
     height: 18px;
     width: 18px;
   }
@@ -94,8 +95,8 @@
 
 
 
-  div .tnt_tooltip{
-    border:1px solid #ccc !important;
+  div .tnt_tooltip {
+    border: 1px solid #ccc !important;
     padding: 0px 0px;
     @include box-shadow( 0px 5px 10px $clr-ui-shadow );
     @include border-radius( 6px );
@@ -112,7 +113,8 @@
     @include border-radius( 10px !important );
   }
 
-  .tnt_tooltip_closer:before, .tnt_tooltip_closer:after {
+  .tnt_tooltip_closer:before,
+  .tnt_tooltip_closer:after {
     @include box-shadow( none !important );
     height: 3px !important;
     width: 12px !important;
@@ -138,7 +140,7 @@
         left: 0px !important;*/
   }
 
-  .tnt_tooltip_closer:after{
+  .tnt_tooltip_closer:after {
     right: 4px !important;
     /*  The close button X
         content:"\f00d" !important;
@@ -159,7 +161,8 @@
     color: inherit !important;
   }
 
-  .tnt_zmenu_row, .tnt_zmenu_header {
+  .tnt_zmenu_row,
+  .tnt_zmenu_header {
     border-color: $clr-ui-background-secondary;
   }
 
@@ -196,14 +199,14 @@
   }
 
   /* Possibly deprecated? */
-  .cttv-blue-background{
+  .cttv-blue-background {
     background: $clr-ui-foreground !important;
     background-color: $clr-ui-foreground !important;
   }
 
 
   // Target-disease score pill in accordion headings
-  .flower-petal{
+  .flower-petal {
     background: $clr-ui-foreground !important;
     background-color: $clr-ui-foreground !important;
     color: #0f0 !important;
@@ -233,7 +236,7 @@
     font-size: 75%;
     font-weight: 500;
     line-height: 1;
-    padding: .2em .6em .3em;
+    padding: 0.2em 0.6em 0.3em;
     text-align: center;
     vertical-align: baseline;
     white-space: nowrap;
@@ -305,7 +308,7 @@
       }
 
       &.disease {
-        color: $clr-warning
+        color: $clr-warning;
       }
 
       &.ortholog {
@@ -329,7 +332,7 @@
 
 
   .badge:hover {
-    color: #ffffff;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
   }
@@ -407,7 +410,7 @@
     font-size: 75%;
     margin-bottom: 3px;
     margin-right: 8px;
-    padding: .2em .6em .3em;
+    padding: 0.2em 0.6em 0.3em;
     @include border-radius( 1.5em );
   }
 
@@ -431,11 +434,11 @@
   }
 
 
-  .dataTables_wrapper{
+  .dataTables_wrapper {
 
   }
 
-  a.accordion-toggle{
+  a.accordion-toggle {
 
     /* remove links color in accordion headings */
     color: inherit;
@@ -444,21 +447,21 @@
     /* display: block; */
     width: 100%;
 
-    &:hover{
+    &:hover {
       color: inherit;
     }
   }
 
   .accordionCell {
-    overflow : auto;
+    overflow: auto;
   }
 
   .accordion-toggle { /* Needed for ie9? */
-    cursor : pointer;
+    cursor: pointer;
   }
 
   .cttv-change-view {
-    cursor : pointer;
+    cursor: pointer;
     margin-top: 10px;
   }
 
@@ -487,12 +490,12 @@
      * Citations
      */
 
-  .epmc_citation_container{
-    margin-bottom:25px;
-    padding-top:3px;
+  .epmc_citation_container {
+    margin-bottom: 25px;
+    padding-top: 3px;
   }
 
-  .epmc_citation_title{
+  .epmc_citation_title {
     font-size: 1.23em;
   }
 
@@ -500,7 +503,7 @@
     padding-left:0px;
 
     a {
-      color:$clr-text;
+      color: $clr-text;
 
       &:hover {
         color: $clr-link-hover;
@@ -508,16 +511,18 @@
     }
   }
 
-  .epmc_citation_authors, .epmc_citation_journal, .epmc_citation_source{
+  .epmc_citation_authors,
+  .epmc_citation_journal,
+  .epmc_citation_source {
     font-size: 13px;
   }
 
-  .epmc_citation_authors{
+  .epmc_citation_authors {
     padding: 4px 0;
   }
 
-  .epmc_citation_source{
-    padding-top:5px;
+  .epmc_citation_source {
+    padding-top: 5px;
   }
 
   .epmc_more_resuts {
@@ -585,10 +590,11 @@
      * PNG export button
      */
 
-  ot-target-associations-bubbles, ot-target-associations-tree{
+  ot-target-associations-bubbles,
+  ot-target-associations-tree {
     ot-png > div {
       float: right;
-      margin-top:24px;
+      margin-top: 24px;
     }
   }
 
@@ -602,31 +608,38 @@
     cursor: pointer;
 
     .fa-circle {
-      color:#000;
-      font-size:24px;
-      position:absolute;
-      right:-12px;
-      top:-12px;
+      color: #000;
+      font-size: 24px;
+      position: absolute;
+      right: -12px;
+      top: -12px;
     }
 
     .fa-times {
-      color:#fff;
-      ont-size:16px;
-      position:absolute;
-      right:-8px;
-      top:-8px
+      color: #fff;
+      ont-size: 16px;
+      position: absolute;
+      right: -8px;
+      top: -8px
     }
   }
 
-  ot-modal{
-    .modal-header{
-      h1,h2,h3,h4,h5,h6{
+  ot-modal {
+    .modal-header {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         margin-bottom: 0px;
         margin-top: 0px;
       }
     }
 
-    .modal-header, .modal-body, .modal-footer{
+    .modal-header,
+    .modal-body,
+    .modal-footer{
       padding: 10px;
     }
   }
@@ -637,7 +650,7 @@
     margin-top: 15px;
 
     .search-item {
-      font-size:12px;
+      font-size: 12px;
       /* cursor: default; */
       &.select-item {
         cursor: pointer;
@@ -653,7 +666,7 @@
       margin-bottom: 10px;
       padding-top: 0.6em;
       //background: $clr-ui-border;
-      text-align:center;
+      text-align: center;
 
       .message {
         margin-left: 0.4em;
@@ -686,7 +699,7 @@
       //display: inline-block;
       //margin-left: 5px;
       height: 2.5em;
-      padding-left:5px;
+      padding-left: 5px;
       width: 95%;
       @include border-radius (6px);
     }

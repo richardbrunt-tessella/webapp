@@ -3,82 +3,82 @@
 /*
  * Utilities (mixins, ect.)
  */
-@import "utils";
+@import 'utils';
 
 
 /*
  * Common colors
  */
-@import "colors";
+@import 'colors';
 
 
 /*
  * Typography
  */
-@import "typography";
+@import 'typography';
 
 
 /*
  * Extra layout options
  */
-@import "layouts";
+@import 'layouts';
 
 
 /*
  * Common page elements
  */
-@import "page";
+@import 'page';
 
 
 /*
  * 3rd party libraries styles
  */
-@import "libraries";
+@import 'libraries';
 
 
 /*
 * Search suggestions (autocomplete) and form
 */
-@import "autocomplete";
+@import 'autocomplete';
 
 
 /*
 * Calendar rules (for outreach)
 */
-@import "calendar";
+@import 'calendar';
 
 
 /*
  * Lists
  */
-@import "lists";
+@import 'lists';
 
 
 /*
 * Tables
 */
-@import "tables";
+@import 'tables';
 
 
 /*
  * Facets
  */
-@import "facets";
+@import 'facets';
 
 
 /*
  * Pages
  */
-@import "page-search";
-@import "page-intro";
-@import "page-target-disease";
-@import "page-outreach";
+@import 'page-search';
+@import 'page-intro';
+@import 'page-target-disease';
+@import 'page-outreach';
 
 /*
  * UI elements
  * e.g. tooltips, spinners, etc
  */
-@import "ui-elements";
+@import 'ui-elements';
 
 
-@import "gtex";
+@import 'gtex';

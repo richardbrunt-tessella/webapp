@@ -7,19 +7,19 @@
     font-weight: 300 !important;
 }*/
 
-.text-lowlight{
+.text-lowlight {
   color: $clr-text-dim;
 }
 
-.text-highlight{
+.text-highlight {
   color: $clr-text-em;
 }
 
-.text-nolight{
+.text-nolight {
   color: $clr-text; /*#666;*/
 }
 
-.small{
+.small {
   font-size: 12px;
   /*line-height: 1.2;*/
 }
@@ -28,7 +28,7 @@
   font-weight: 600;
 }
 
-.text-small{
+.text-small {
   font-size: 12px;
   /*line-height: 1.2;*/
 }
@@ -37,7 +37,8 @@
   font-size: 16px;
 }
 
-.text-disabled, .disabled{
+.text-disabled,
+.disabled {
   color: $clr-text-dim;
   cursor: default;
   text-decoration: none;
