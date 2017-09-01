@@ -50,7 +50,9 @@
     "start": "cd server && node server.js",
     "test": "./node_modules/.bin/gulp test",
     "test-single-run": "karma start tests/unit/karma.conf.js  --single-run",
-    "eslint": "./node_modules/.bin/eslint -f html -o eslint.html 'app/js/**.js'; exit 0"
+    "eslint": "./node_modules/.bin/eslint -f html -o eslint.html 'app/js/**.js'; exit 0",
+    "stylelint": "./node_modules/.bin/stylelint 'app/css/*.scss' -f=verbose",
+    "purify-css": "./node_modules/.bin/purifycss app/build/OpenTargetsWebapp.min.css 'app/**/*.{html,js}' --info --rejected --out /dev/null"
   },
   "dependencies": {
     "babel-polyfill": "6.23.0",
