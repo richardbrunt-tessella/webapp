@@ -34,6 +34,7 @@
     "gulp-watch": "3.0.0",
     "jspm": "^0.16.34",
     "mkdirp": "0.5.1",
+    "purify-css": "^1.2.5",
     "stylelint": "^8.0.0",
     "stylelint-config-sass-guidelines": "^3.1.0",
     "stylelint-config-standard": "^17.0.0",
