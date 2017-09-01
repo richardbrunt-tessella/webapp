@@ -33,29 +33,30 @@
  */
 
 .badge-primary, .label-primary{
-    background-color: $clr-primary; //$btn-primary-bg;
+  background-color: $clr-primary; //$btn-primary-bg;
 }
 
 
 .btn-primary{
-    background-color: $btn-primary-bg;
-    border-color: $btn-primary-border;
-    &:hover{
-        background-color: $btn-primary-bg-hover;
-        //border-color: $btn-primary-border-hover;
-    }
+  background-color: $btn-primary-bg;
+  border-color: $btn-primary-border;
+
+  &:hover{
+    background-color: $btn-primary-bg-hover;
+    //border-color: $btn-primary-border-hover;
+  }
 }
 
 .pagination li a , .pagination li a:focus{
-    color: $btn-primary-bg;
+  color: $btn-primary-bg;
 }
 
 .pagination .active a , .pagination .active a:focus{
-    background-color: $btn-primary-bg;
-    border-color: $btn-primary-border;
+  background-color: $btn-primary-bg;
+  border-color: $btn-primary-border;
 
-    &:hover{
-        background-color: $btn-primary-bg-hover;
-        //border-color: $btn-primary-border-hover;
-    }
+  &:hover{
+    background-color: $btn-primary-bg-hover;
+    //border-color: $btn-primary-border-hover;
+  }
 }

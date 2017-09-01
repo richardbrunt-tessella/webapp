@@ -9,13 +9,13 @@
 
 
 html, body {
-    height:100%;
-    line-height: 1.35;
+  height:100%;
+  line-height: 1.35;
 }
 
 body{
-    color: $clr-text;
-    background: $body-background;
+  background: $body-background;
+  color: $clr-text;
 }
 
 @include scrollbar(14px);
@@ -27,44 +27,44 @@ body{
 
 
 .ot-centered-text {
-    display: table-cell;
-    text-align: center;
+  display: table-cell;
+  text-align: center;
 }
 
 .ot-beta-ribbon {
-    background-color: #a00;
-    overflow: hidden;
-    white-space: nowrap;
-    color: white;
-    padding: 5px 50px;
-    margin: 1px 0;
-    font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-align: center;
-    border: 1px solid #faa;
+  background-color: #a00;
+  border: 1px solid #faa;
+  color: white;
+  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  left: -40px;
+  margin: 1px 0;
+  overflow: hidden;
+  padding: 5px 50px;
+  position: absolute;
+  text-align: center;
 
-    z-index: 1000;
-    position: absolute;
-    left: -40px;
-    top: 10px;
+  text-shadow: 0 0 5px #444;
+  top: 10px;
+  white-space: nowrap;
 
-    @include transform( rotate(-45deg) );
+  z-index: 1000;
 
-    @include box-shadow( 0 0 10px #888 );
+  @include transform( rotate(-45deg) );
 
-    text-shadow: 0 0 5px #444;
+  @include box-shadow( 0 0 10px #888 );
 }
 
 
 .ot-main-container {
-    width:100%;
-    background: $primary-background-color;
-    padding-bottom:70px;
-    padding-bottom:320px;
+  background: $primary-background-color;
+  padding-bottom:70px;
+  padding-bottom:320px;
+  width:100%;
 }
 
 .ot-page-wrapper {
-    min-height:100%;
-    position:relative;
+  min-height:100%;
+  position:relative;
 }
 
 
@@ -74,78 +74,79 @@ body{
 
 
 .masthead {
-    width:100%;
-    background-color: $masthead-background;
-    background: -webkit-linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
-    background: -moz-linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
-    background: -o-linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
-    background: linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
+  background: -webkit-linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
+  background: -moz-linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
+  background: -o-linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
+  background: linear-gradient(left, $masthead-background  0%, $extra-brand-color  100%);
+  background-color: $masthead-background;
 
 
 
 
-    // padding: 8px 0;
+  // padding: 8px 0;
+  height: auto;
+
+  position: relative;
+  width:100%;
+
+  // box-shadow: 0 1px 5px 0 $clr-ui-shadow;
+  z-index: 10; // this will need some sort of variable presumably?
+
+
+  .container{
     height: auto;
+  }
 
-    position: relative;
-
-    // box-shadow: 0 1px 5px 0 $clr-ui-shadow;
-    z-index: 10; // this will need some sort of variable presumably?
-
-
-    .container{
-        height: auto;
-    }
-
-    .global-search {
-        margin: 8px 0px;
-    }
+  .global-search {
+    margin: 8px 0px;
+  }
 }
 
 .masthead-border {
-    border-bottom: 1px solid $masthead-border;
-    box-shadow: 0 1px 5px 0 $clr-ui-shadow;
+  border-bottom: 1px solid $masthead-border;
+  box-shadow: 0 1px 5px 0 $clr-ui-shadow;
 }
 
 .ot_logo {
-    margin: 10px 0px;
-    width: 195px;
+  margin: 10px 0px;
+  width: 195px;
 }
 
 .ot_logo_graphics, .ot_logo_type{
-    float:left;
-    height: 30px;
-    overflow: hidden;
+  float:left;
+  height: 30px;
+  overflow: hidden;
 }
 
 .ot_logo_graphics {
-    width: 30px;
+  width: 30px;
 }
 
 .ot_logo_type{
-    width: 165px;
-    img{
-        position: relative;
-        left: -30px;
-    }
+  width: 165px;
+
+  img{
+    left: -30px;
+    position: relative;
+  }
 }
 
 .ot-logotype {
-    font-size: 24px;
-    font-weight: 100;
-    color: #888;
-    line-height: 24px;
+  color: #888;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 24px;
 }
 
 .masthead-navigation-container {
-    text-align: right;
+  text-align: right;
 }
 
 .masthead-dimmer {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  position: absolute;
+  width: 100%;
 }
 
 /*
@@ -155,71 +156,71 @@ body{
 
 
 .masthead-navigation {
-    list-style: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px; //override browser default for ul elements
-    height: 50px;
+  height: 50px;
+  list-style: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px; //override browser default for ul elements
 
-    >li {
-        display: inline-block;
+  >li {
+    display: inline-block;
 
-        >div {
-            &.open{
-                background: $clr-ui-background-secondary;
-            }
+    >div {
+      &.open{
+        background: $clr-ui-background-secondary;
+      }
 
-            >a, >a:focus {
-                padding: 0px 7px;
-                height: 50px;
-                display: table-cell;
-                vertical-align: middle;
-            }
-        }
+      >a, >a:focus {
+        display: table-cell;
+        height: 50px;
+        padding: 0px 7px;
+        vertical-align: middle;
+      }
     }
+  }
 
-    /* style the dropdown, based on bootstrap ui components */
-    .uib-dropdown-menu {
-        font-size: 12px;
-        border-radius: 0px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px;
-        margin: 0px;
+  /* style the dropdown, based on bootstrap ui components */
+  .uib-dropdown-menu {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-radius: 0px;
+    border-top-right-radius: 4px;
+    font-size: 12px;
+    margin: 0px;
 
-        li a {
-            color: $clr-link;
-            padding: 3px 8px;
-            &:hover {
-                //color: #FFF;
-                background: $clr-ui-background-secondary; //$btn-primary-bg-hover;
-            }
-        }
+    li a {
+      color: $clr-link;
+      padding: 3px 8px;
+
+      &:hover {
+        //color: #FFF;
+        background: $clr-ui-background-secondary; //$btn-primary-bg-hover;
+      }
     }
+  }
 }
 
 
 .ot-dropdown-hamburger {
-    right: 0px;
-    left: inherit; // need this to invalidate default left value
+  left: inherit; // need this to invalidate default left value
+  right: 0px;
 }
 
 
 .masthead .masthead-navigation {
+  .uib-dropdown-menu {
+    border-top-right-radius: 0px;
+  }
 
-    .uib-dropdown-menu {
-        border-top-right-radius: 0px;
+  >li div {
+    &.open, &:hover {
+      background: $clr-black-a10; //$btn-primary-bg-hover;
     }
 
-    >li div {
-        &.open, &:hover {
-            background: $clr-black-a10; //$btn-primary-bg-hover;
-        }
-
-        >a, >a:focus {
-            color: #fff;
-        }
+    >a, >a:focus {
+      color: #fff;
     }
+  }
 }
 
 
@@ -229,45 +230,45 @@ body{
  */
 
 .masthead-notifications-menu {
-    height: 50px;
+  height: 50px;
 
 }
 
 
 .notification {
-    position:relative;
-    color:white;
-    font-size:19px;
-    margin: 12px 7px;
+  color:white;
+  font-size:19px;
+  margin: 12px 7px;
+  position:relative;
 
-    // float: right;
-    // margin-top:10px;
-    // margin-top:10px;
-    // width:50px;
+  // float: right;
+  // margin-top:10px;
+  // margin-top:10px;
+  // width:50px;
 
-    .counter {
-        border-radius:50%;
-        color: white;
-        width:14px;
-        height:14px;
-        background:red;
-        position:absolute;
-        //left:39px;
-        right: -5px;
-        top:0px;
-        font-size:10px;
-        text-align:center;
-        pointer-events:none;
-    }
+  .counter {
+    background:red;
+    border-radius:50%;
+    color: white;
+    font-size:10px;
+    height:14px;
+    pointer-events:none;
+    position:absolute;
+    //left:39px;
+    right: -5px;
+    text-align:center;
+    top:0px;
+    width:14px;
+  }
 
-    >i {
-        cursor:pointer;
-    }
+  >i {
+    cursor:pointer;
+  }
 }
 
 
 .masthead-home .notification {
-    color: $primary-brand-color;
+  color: $primary-brand-color;
 }
 
 
@@ -277,35 +278,35 @@ body{
  */
 
 .masthead-search-container{
-    max-width:35%;
-    //padding-left: 8px;
+  max-width:35%;
+  //padding-left: 8px;
 }
 
 .masthead-search-menu{
-    padding-left: 7px
+  padding-left: 7px
 }
 
 .masthead-responsive-search{
-    height: 50px;
-    padding: 14px 7px;
-    padding-right: 0px;
-    cursor: pointer;
+  cursor: pointer;
+  height: 50px;
+  padding: 14px 7px;
+  padding-right: 0px;
 }
 
 .masthead-responsive-search-icon{
-    color: #fff;
-    //font-size: 19px;
+  color: #fff;
+  //font-size: 19px;
 }
 
 .masthead-responsive-search-panel{
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 50%;
-    margin: 0px 15px;
-    min-width: 290px;
-    height: 50px;
-    z-index: 10;
+  height: 50px;
+  margin: 0px 15px;
+  min-width: 290px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 50%;
+  z-index: 10;
 }
 
 
@@ -316,45 +317,46 @@ body{
 
 
 .footer {
-    font-size: 14px;
-    font-weight: 300;
-    color: $footer-text;
-    padding: 24px 0;
-    //border-top: 1px solid $footer-border;
+  //border-top: 1px solid $footer-border;
 
-    background: $footer-background;
-    width:100%;
-    height:320px;
-    position:absolute;
-    bottom:0;
-    left:0;
+  background: $footer-background;
+  bottom:0;
+  color: $footer-text;
+  font-size: 14px;
+  font-weight: 300;
+  height:320px;
+  left:0;
 
-    overflow: hidden;
+  overflow: hidden;
+  padding: 24px 0;
+  position:absolute;
+  width:100%;
 
-    a{
-        color: inherit;
-        &:hover {
-            color: $footer-text-dim;
-        }
+  a{
+    color: inherit;
+
+    &:hover {
+      color: $footer-text-dim;
     }
+  }
 
 }
 
 .footer-section-header {
-    color: $footer-text-dim;
-    font-weight: 400;
-    //text-transform: uppercase;
+  color: $footer-text-dim;
+  font-weight: 400;
+  //text-transform: uppercase;
 }
 
 .footer-menu {
-    padding-left: 0;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
 
-    li {
-        list-style-type: none;
-        margin-left: 0;
-        margin-bottom: 5px;
-    }
+  li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    margin-left: 0;
+  }
 }
 
 
@@ -364,8 +366,8 @@ body{
  */
 
 .cookiebanner {
-    font-family: inherit !important;
-    font-weight: 200;
+  font-family: inherit !important;
+  font-weight: 200;
 }
 
 .cookiebanner-close {
@@ -374,8 +376,8 @@ body{
 
 /* define the container for an angular partial*/
 .partial-page{
-    position:relative;
-    padding-bottom: 40px;
+  padding-bottom: 40px;
+  position:relative;
 }
 
 
@@ -383,40 +385,40 @@ body{
 
 /* non-breaking block */
 .nbblock{
-    display:block;
-    margin-bottom:0px;
-    margin-top: 10px;
+  display:block;
+  margin-bottom:0px;
+  margin-top: 10px;
 }
 
 
 
 
 .ot-section-intro {
-    font-style: italic;
-    background-color: $clr-ui-background-secondary; // was #EEE
-    padding: 10px;
+  background-color: $clr-ui-background-secondary; // was #EEE
+  font-style: italic;
+  padding: 10px;
 }
 
 .ot-interpage-link {
-    padding-left: 15px;
-    margin-left: 15px;
-    border-left: 1px solid $clr-ui-border; // was #CCC
+  border-left: 1px solid $clr-ui-border; // was #CCC
+  margin-left: 15px;
+  padding-left: 15px;
 }
 
 .ot-content-header {
-    margin-bottom: 30px;
-    //border-bottom: 1px solid $clr-ui-border;
-    //box-shadow: 0 0 5px 0 $clr-ui-shadow;
-    //background: $clr-ui-background;
+  margin-bottom: 30px;
+  //border-bottom: 1px solid $clr-ui-border;
+  //box-shadow: 0 0 5px 0 $clr-ui-shadow;
+  //background: $clr-ui-background;
 
-    h4 {
-        font-weight: 300;
-    }
+  h4 {
+    font-weight: 300;
+  }
 
-    h3 {
-        @extend h4;
-        margin-bottom: 0px;
-    }
+  h3 {
+    @extend h4;
+    margin-bottom: 0px;
+  }
 
 }
 
@@ -426,30 +428,30 @@ body{
  * Feedback side panel
  */
 .ot-feedback-button {
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,.2);
+  left: 100%;
+  margin-top: -30px;
+  min-height: 30px;
+  overflow: hidden;
 
-    position: fixed;
-    top: 50%;
-    margin-top: -30px;
-    left: 100%;
-    z-index: 10000;
-    min-height: 30px;
-    @include transform-origin( left 30px );
-    @include transform( rotate(-90deg) );
-    @include border-top-right-radius( 5px );
-    overflow: hidden;
-    box-shadow: 0px 0px 6px 1px rgba(0,0,0,.2);
+  position: fixed;
+  top: 50%;
+  z-index: 10000;
+  @include transform-origin( left 30px );
+  @include transform( rotate(-90deg) );
+  @include border-top-right-radius( 5px );
 
-    a {
-        color: #FFF;
+  a {
+    color: #fff;
 
-        div {
-            padding: 7px 12px 5px 12px;
-            background: $extra-brand-color;
+    div {
+      background: $extra-brand-color;
 
-            font-size: 14px;
-            font-weight: 400;
-        }
+      font-size: 14px;
+      font-weight: 400;
+      padding: 7px 12px 5px 12px;
     }
+  }
 }
 
 
@@ -457,7 +459,7 @@ body{
  * Add the full round corners to the feedback panel when shown on its own
  */
 .ot-feedback-button-round {
-    @include border-top-left-radius( 5px );
+  @include border-top-left-radius( 5px );
 }
 
 
@@ -466,44 +468,44 @@ body{
  * Container for the social media icons / follow us thingy
  */
 .ot-social-panel {
-    position: fixed;
-    top: 50%;
-    border-top: 1px solid #fff;
-    z-index: 10001;
-    right: 0;
-    @include border-bottom-left-radius( 5px );
-    overflow: hidden;
-    box-shadow: 0 0 6px 1px rgba(0,0,0,.2);
+  border-top: 1px solid #fff;
+  box-shadow: 0 0 6px 1px rgba(0,0,0,.2);
 
+  cursor: pointer;
+  min-height: 90px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 50%;
+
+  width: 30px;
+  z-index: 10001;
+  @include border-bottom-left-radius( 5px );
+
+
+  .ot-social-panel-item {
+    color: #fff;
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    height: 30px;
+    padding-top: 6px;
+    text-align: center;
     width: 30px;
-    min-height: 90px;
+  }
 
-    cursor: pointer;
-
-
-    .ot-social-panel-item {
-        width: 30px;
-        height: 30px;
-        color: #FFF;
-        font-size: 14px;
-        text-align: center;
-        font-family: 'FontAwesome';
-        padding-top: 6px;
-    }
-
-    .ot-social-panel-follow {
-        background: $secondary-color;
-        color: #FFF;
-        min-width:90px;
-        min-height: 30px;
-        position: absolute;
-        top: -30px;
-        right: 0px;
-        @include transform-origin( bottom right );
-        @include transform( rotate(-90deg) );
-        text-align: center;
-        padding: 7px 0px 5px 0px;
-    }
+  .ot-social-panel-follow {
+    background: $secondary-color;
+    color: #fff;
+    min-height: 30px;
+    min-width:90px;
+    padding: 7px 0px 5px 0px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: -30px;
+    @include transform-origin( bottom right );
+    @include transform( rotate(-90deg) );
+  }
 }
 
 
@@ -511,48 +513,51 @@ body{
  * The linkedin icon block
  */
 .ot-social-panel-linkedin{
-    background: #0077B5;
-    &:after {
-        content: "\f0e1";
-    };
+  background: #0077b5;
+
+  &:after {
+    content: "\f0e1";
+  };
 }
 
 .ot-social-panel-twitter{
-    background: #00ACED;
-    &:after {
-        content: "\f099";
-    };
+  background: #00aced;
+
+  &:after {
+    content: "\f099";
+  };
 }
 
 .ot-social-panel-facebook{
-    background: #4867AA;
-    &:after {
-        content: "\f09a";
-    };
+  background: #4867aa;
+
+  &:after {
+    content: "\f09a";
+  };
 }
 
 
 
 .footer-social-bar {
-    span {
-        padding-right: 5px;
-        font-size: 15px;
-    }
+  span {
+    font-size: 15px;
+    padding-right: 5px;
+  }
 }
 
 .fixed {
-    position: fixed;
+  position: fixed;
 }
 
 
 
 .main-alert-container {
-    .alert{
-        margin-top: 20px;
-    }
+  .alert{
+    margin-top: 20px;
+  }
 
-    .row>div{
-        /* reset the min height of columns */
-        min-height:0px;
-    }
+  .row>div{
+    /* reset the min height of columns */
+    min-height:0px;
+  }
 }

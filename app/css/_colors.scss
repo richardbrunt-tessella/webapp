@@ -8,14 +8,14 @@
 
 
 $primary-color: #5c5a69; // cool grey #5A5F5F;            // text grey
-$secondary-color: #0091EB;          // links blue
+$secondary-color: #0091eb;          // links blue
 //$secondary-color: adjust-color( #0091EB, $lightness: -5% );
 
-$primary-background-color: #FFF;    // white
-$secondary-background-color: #EEE;  // gray
+$primary-background-color: #fff;    // white
+$secondary-background-color: #eee;  // gray
 
-$primary-brand-color: #3E8BAD;      // flower blue
-$secondary-brand-color: #FF6350; //#8b435f;    // ot logo red
+$primary-brand-color: #3e8bad;      // flower blue
+$secondary-brand-color: #ff6350; //#8b435f;    // ot logo red
 $extra-brand-color: #1e5799;        // new blue //#0052A3
 
 $brand-light-blue: #b2def9;
@@ -58,16 +58,16 @@ $clr-link-hover: adjust-color( $extra-brand-color, $lightness: 5% );
  * UI elements colors
  */
 
-$clr-ui-background: #F5F5F5;    // bootstrap grey
+$clr-ui-background: #f5f5f5;    // bootstrap grey
 $clr-ui-background-secondary: scale-color( $clr-ui-background, $lightness: -3% ); //e6e6e6
-$clr-ui-border: #DDD;           // border grey
+$clr-ui-border: #ddd;           // border grey
 $clr-ui-shadow: rgba(0,0,0,0.2);
 $clr-ui-lightbox-w: rgba(255,255,255,.5);
 $clr-ui-foreground: #005299; // visualization blue
 $clr-ui-selected: $secondary-color;
 
 $clr-artboard-foregroud: #000;
-$clr-artboard-backgroud: #FFF;
+$clr-artboard-backgroud: #fff;
 
 $clr-private-data: #f36633; // GSK orange
 

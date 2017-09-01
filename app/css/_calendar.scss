@@ -1,124 +1,126 @@
 @mixin vertical-centre ($height) {
-    height:$height;
-    line-height:$height !important;
-    display:inline-block;
-    vertical-align:middle;
+  display:inline-block;
+  height:$height;
+  line-height:$height !important;
+  vertical-align:middle;
 }
 
 @mixin border-box {
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
-$border-colour:#CCC;
+$border-colour:#ccc;
+
 ot-calendar {
+  background:white;
+  border:solid 1px $border-colour;
+  display:block;
+  float:left;
+  margin-bottom:10px;
+  //width:300px;
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
+  @include border-box;
+
+  $secondary-colour:#2875c7;
+  $spacing:10px;
+  $icon-width:40px;
+  $header-height:40px;
+
+  >div.header {
+    background:$secondary-colour;
+    color:white;
     float:left;
-    display:block;
-    @include border-box;
-    background:white;
-    //width:300px;
-    max-width: 300px;
-    min-width: 200px;
-    width: 100%;
-    border:solid 1px $border-colour;
-    margin-bottom:10px;
+    height:$header-height;
+    width:100%;
 
-    $secondary-colour:#2875C7;
-    $spacing:10px;
-    $icon-width:40px;
-    $header-height:40px;
+    >* {
+      @include vertical-centre($header-height);
+      // .vertical-centre($header-height);
+    }
 
-    >div.header {
-        float:left;
-        width:100%;
+    >i {
+      cursor:pointer;
+      float:left;
+      font-size:1.125em;
+      font-weight:bold;
+      padding:0 $spacing;
+      position:relative;
+      width:$icon-width;
+      @include border-box;
+    }
+
+    >i.fa-angle-left {
+      text-align:left;
+    }
+
+    >i.fa-angle-right {
+      margin-left:$icon-width*-1;
+      text-align:right;
+    }
+
+    >span {
+      color:inherit;
+      float:left;
+      font-weight:bold;
+      margin-left:$icon-width*-1;
+      padding-left:$icon-width+$spacing;
+      padding-right:$icon-width;
+      text-align:center;
+      text-transform:uppercase;
+      width:100%;
+      @include border-box;
+    }
+  }
+
+  >div.week {
+    border-top:solid 1px $border-colour;
+    float:left;
+    width:100%;
+
+    &:first-child {
+      border-top:none;
+    }
+
+    >span.day {
+      background:white;
+      border-left:solid 1px $border-colour;
+      color:black;
+      cursor:pointer;
+      float:left;
+      font-size:0.75em;
+      text-align:center;
+      width:14.285715%; // 100/7
+      @include border-box;
+      @include vertical-centre(30px);
+
+      &:first-child {
+        border-left:none;
+      }
+
+      &.event {
+        background:#ffe6e6;
+      }
+
+      &.today {
+        background:#e3f2ff;
+      }
+
+      &.different-month {
+        color:#c0c0c0;
+      }
+
+      &.selected {
         background:$secondary-colour;
-        height:$header-height;
         color:white;
-
-        >* {
-            @include vertical-centre($header-height);
-            // .vertical-centre($header-height);
-        }
-
-        >i {
-            float:left;
-            width:$icon-width;
-            font-size:1.125em;
-            font-weight:bold;
-            position:relative;
-            @include border-box;
-            padding:0 $spacing;
-            cursor:pointer;
-        }
-
-        >i.fa-angle-left {
-            text-align:left;
-        }
-
-        >i.fa-angle-right {
-            text-align:right;
-            margin-left:$icon-width*-1;
-        }
-
-        >span {
-            float:left;
-            width:100%;
-            font-weight:bold;
-            text-transform:uppercase;
-            @include border-box;
-            padding-left:$icon-width+$spacing;
-            margin-left:$icon-width*-1;
-            text-align:center;
-            padding-right:$icon-width;
-            color:inherit;
-        }
+      }
     }
-    >div.week {
-        float:left;
-        width:100%;
-        border-top:solid 1px $border-colour;
 
-        &:first-child {
-            border-top:none;
-        }
-
-        >span.day {
-            float:left;
-            width:14.285715%; // 100/7
-            @include border-box;
-            border-left:solid 1px $border-colour;
-            font-size:0.75em;
-            text-align:center;
-            @include vertical-centre(30px);
-            background:white;
-            cursor:pointer;
-            color:black;
-
-            &:first-child {
-                border-left:none;
-            }
-
-            &.event {
-                background:#ffe6e6;
-            }
-
-            &.today {
-                background:#E3F2FF;
-            }
-
-            &.different-month {
-                color:#C0C0C0;
-            }
-
-            &.selected {
-                background:$secondary-colour;
-                color:white;
-            }
-        }
-
-        &.names>span {
-            color:$secondary-colour;
-            font-weight:bold;
-        }
+    &.names>span {
+      color:$secondary-colour;
+      font-weight:bold;
     }
+  }
 }

@@ -3,18 +3,18 @@
  */
 
 .ot-facet .therapeuticArea .panel-heading {
-    /*background-color: #c6dcec;*/
+  /*background-color: #c6dcec;*/
 }
 
 .ot-facet .cttv-accordion-leaf .panel-heading {
-    /*background-color: #f5f5f5;*/
+  /*background-color: #f5f5f5;*/
 }
 
 /* .ot-facet .cttv-accordion-leaf .panel-body { */
-    /*     padding : 0px; */
-    /* } */
+/*     padding : 0px; */
+/* } */
 
-    /*.ot-facet .panel-heading {
+/*.ot-facet .panel-heading {
         padding : 5px;
     }
     .ot-facet .panel-body {
@@ -26,47 +26,48 @@
     }*/
 
 .ot-facets{
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .ot-facets-headers{
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .ot-facets-controls {
-    font-size: 11px;
-    background-color: $clr-ui-background;
-    @include border-radius( 3px );
-    padding: 2px;
-    margin-bottom: 2px;
-    text-align: right;
+  background-color: $clr-ui-background;
+  font-size: 11px;
+  margin-bottom: 2px;
+  padding: 2px;
+  text-align: right;
+  @include border-radius( 3px );
 
 
-    > span{
-        cursor: pointer;
-        margin-right:10px;
-    }
+  > span{
+    cursor: pointer;
+    margin-right:10px;
+  }
 
-    > span:hover{
-        color: $clr-text-em;
-    }
+  > span:hover{
+    color: $clr-text-em;
+  }
 }
+
 .ot-facets-selected-summary{
-    border-bottom:1px solid $clr-ui-border; // was #CCC
-    margin-bottom:25px;
-    padding-bottom:10px;
+  border-bottom:1px solid $clr-ui-border; // was #CCC
+  margin-bottom:25px;
+  padding-bottom:10px;
 }
 
 .ot-facets-small-arrow{
-    width: 12px;
-    cursor: pointer;
+  cursor: pointer;
 
-    padding: 0px 4px;
+  padding: 0px 4px;
+  width: 12px;
 }
 
 .ot-facets-child-label-no-checkbox{
-    width:auto;
-    padding-left: 20px
+  padding-left: 20px;
+  width:auto
 }
 
 
@@ -78,91 +79,92 @@
 
 
 .ot-facets {
-    .panel{
-        @include border-radius( 0px );
-        border: none;
-        @include box-shadow(none);
+  .panel{
+    @include border-radius( 0px );
+    border: none;
+    @include box-shadow(none);
+  }
+
+  .panel-title{
+    font-size: 14px;
+  }
+
+  .panel-heading{
+    border-bottom: 1px solid $clr-ui-border;
+    color:inherit;
+    padding: 10px 0px;
+  }
+
+  .panel-group .panel-heading+.panel-collapse>.panel-body{
+    border-top: none;
+  }
+
+  .panel-default{
+    >.panel-heading{
+      background: none;
     }
 
-    .panel-title{
-        font-size: 14px;
+    >.panel-heading+.panel-collapse>.panel-body{
+      border-top-color: none;
+    }
+  }
+
+  .panel-body{
+    padding: 5px 0px;
+  }
+
+  .boxed-scrollable {
+    border: 1px solid $clr-ui-background;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-height: 120px;
+    overflow-y: auto;
+
+    .suggestion {
+      &.query {
+        background-color: $clr-info-highlight;
+      }
+
+      &.result {
+        background-color: $clr-primary-highlight;
+      }
     }
 
-    .panel-heading{
-        color:inherit;
-        border-bottom: 1px solid $clr-ui-border;
-        padding: 10px 0px;
-    }
-
-    .panel-group .panel-heading+.panel-collapse>.panel-body{
-        border-top: none;
-    }
-
-    .panel-default{
-        >.panel-heading{
-            background: none;
-        }
-
-        >.panel-heading+.panel-collapse>.panel-body{
-            border-top-color: none;
-        }
-    }
-
-    .panel-body{
-        padding: 5px 0px;
-    }
-
-    .boxed-scrollable {
-        max-height: 120px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        overflow-y: auto;
-        border: 1px solid $clr-ui-background;
-
-        .suggestion {
-            &.query {
-                background-color: $clr-info-highlight;
-            }
-            &.result {
-                background-color: $clr-primary-highlight;
-            }
-        }
-
-    }
+  }
 
 
 
-    /* Minimal scrollbars */
-    @include scrollbar(8px);
+  /* Minimal scrollbars */
+  @include scrollbar(8px);
 }
 
 
 
 .ot-facet-checkbox {
-    /* overrides bootstrap values */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    clear:both;
+  clear:both;
 
-    cursor:pointer;
+  cursor:pointer;
+  margin-bottom: 0px;
+  /* overrides bootstrap values */
+  margin-top: 0px;
 }
 
 .ot-facet-checkbox-label{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    float:left;
-    /*padding-right: 5px;*/
-    max-width: 75%;
 
-    display: inline;
+  display: inline;
+  float:left;
+  /*padding-right: 5px;*/
+  max-width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ot-facet-checkbox-label > input,
 .ot-facet-checkbox-label-multiline > input{
-    /* overrides bootstrap values */
-    margin: 0px;
-    margin-top: 2px;
+  /* overrides bootstrap values */
+  margin: 0px;
+  margin-top: 2px;
 }
 
 /*
@@ -170,14 +172,14 @@
 */
 
 .cttv-nav accordion {
-    /* overrides bootstrap values */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    clear:both;
-    font-size: 12px;
+  clear:both;
+  font-size: 12px;
+  margin-bottom: 0px;
+  /* overrides bootstrap values */
+  margin-top: 0px;
 
 
-    /*.cttv-nav .therapeuticArea{
+  /*.cttv-nav .therapeuticArea{
         height: 16px;
     }
 
@@ -186,56 +188,56 @@
     }*/
 
 
-    h4 {
-        font-size: 12px !important;
-        font-weight: 400;
+  h4 {
+    font-size: 12px !important;
+    font-weight: 400;
 
+  }
+
+  .panel-heading {
+    border-bottom: none;
+    height:auto;
+    padding: 1px 0px;
+  }
+
+  accordion {
+    .panel-group {
+      margin: 0px;
     }
 
-    .panel-heading {
-        border-bottom: none;
-        height:auto;
-        padding: 1px 0px;
+    .panel-body {
+      margin-left: 12px;
+      margin-right: 12px;
     }
 
-    accordion {
-        .panel-group {
-            margin: 0px;
-        }
-
-        .panel-body {
-            margin-left: 12px;
-            margin-right: 12px;
-        }
-
-        .jumbotron {
-            padding-top: 10px;
-            padding-right: 10px;
-            padding-bottom: 10px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-        }
+    .jumbotron {
+      margin-bottom: 0px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
     }
+  }
 }
 
 
 .ot-facet-count {
-    font-size:11px;
-    margin-left:3px;
+  font-size:11px;
+  margin-left:3px;
 }
 
 .ot-facet-checkbox-label-multiline{
+  display: inline;
+  float:left;
+
+  > .ot-facet-count{
     display: inline;
-    float:left;
+    float:none;
+  }
 
-    > .ot-facet-count{
-        float:none;
-        display: inline;
-    }
-
-    span{
-        line-height: 6px;
-    }
+  span{
+    line-height: 6px;
+  }
 }
 
 /* .cttv_bullet_link {

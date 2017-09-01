@@ -2,119 +2,122 @@
 @import "colors";
 
 #ot-page-app {
+  .popover {
+    max-width: 100%;
+    min-width: 378px;
+  }
 
-    .popover {
-        min-width: 378px;
-        max-width: 100%;
-    }
-
-    /*
+  /*
     * one line modals
     */
-    .modal-body-center {
-        text-align: center;
-    }
-    .png-scale-factor-selection {
-        padding: 10px;
-    }
+  .modal-body-center {
+    text-align: center;
+  }
 
-    /*
+  .png-scale-factor-selection {
+    padding: 10px;
+  }
+
+  /*
      * The menu bar of the lite mol widget needs to be shown on top of the masthead
      */
-     //pdb-lite-mol .lm-plugin {
-     //    z-index: 10000;
-     //}
+  //pdb-lite-mol .lm-plugin {
+  //    z-index: 10000;
+  //}
 
-    /*
+  /*
      * The PDB widget CSS styling
      */
-    //  .pdb-widget-container {
-    //      display : block;
-    //      margin-left : auto;
-    //      margin-right : auto;
-    //      position : relative;
-    //      width : 350px;
-    //      height : 700px;
-    //      margin-top : 30px;
-    //  }
-     // Size
-     .variantStructureModalWindow .modal-dialog {
-         width: 450px;
-         .snpLegend, .snpHeader {
-             margin-left: 20px;
-             .pdbLink {
-                 float:right;
-                 margin-right: 10px;
-             }
-             .snpBall {
-                 background: orange;
-                 width:10px;
-                 height:10px;
-                 border-radius: 5px;
-                 margin-right: 10px;
-                 display: inline-block;
-             }
-         }
-     }
+  //  .pdb-widget-container {
+  //      display : block;
+  //      margin-left : auto;
+  //      margin-right : auto;
+  //      position : relative;
+  //      width : 350px;
+  //      height : 700px;
+  //      margin-top : 30px;
+  //  }
+  // Size
+  .variantStructureModalWindow .modal-dialog {
+    width: 450px;
+
+    .snpLegend, .snpHeader {
+      margin-left: 20px;
+
+      .pdbLink {
+        float:right;
+        margin-right: 10px;
+      }
+
+      .snpBall {
+        background: orange;
+        border-radius: 5px;
+        display: inline-block;
+        height:10px;
+        margin-right: 10px;
+        width:10px;
+      }
+    }
+  }
 
 
-    /*
+  /*
      * Spinners
      */
 
-    .page-progress-spinner{
-        width:100%;
-        height: 100%;
-        text-align:center;
-        padding-top:150px;
-        position: absolute;
-        background-color: $clr-ui-lightbox-w;
-        z-index: 1000;
-        left: 0px;
-    }
+  .page-progress-spinner{
+    background-color: $clr-ui-lightbox-w;
+    height: 100%;
+    left: 0px;
+    padding-top:150px;
+    position: absolute;
+    text-align:center;
+    width:100%;
+    z-index: 1000;
+  }
 
-    .ot-progress-spinner-svg-container {
-        display:inline-block;
-        width: 18px;
-        height: 18px;
-    }
+  .ot-progress-spinner-svg-container {
+    display:inline-block;
+    height: 18px;
+    width: 18px;
+  }
 
-    .cttv-spinner-component {
-        fill: $secondary-color;
-    }
+  .cttv-spinner-component {
+    fill: $secondary-color;
+  }
 
 
 
-    /*
+  /*
      * Override componenets tooltip settings
      */
 
 
 
-    div .tnt_tooltip{
-        border:1px solid #CCC !important;
-        @include box-shadow( 0px 5px 10px $clr-ui-shadow );
-        padding: 0px 0px;
-        @include border-radius( 6px );
-    }
+  div .tnt_tooltip{
+    border:1px solid #ccc !important;
+    padding: 0px 0px;
+    @include box-shadow( 0px 5px 10px $clr-ui-shadow );
+    @include border-radius( 6px );
+  }
 
-    .tnt_tooltip_active {
+  .tnt_tooltip_active {
 
-    }
+  }
 
-    .tnt_tooltip_closer {
-        /*background: none !important;
+  .tnt_tooltip_closer {
+    /*background: none !important;
         background-color: transparent !important;
         border-radius: 0px !important;*/
-        @include border-radius( 10px !important );
-    }
+    @include border-radius( 10px !important );
+  }
 
-    .tnt_tooltip_closer:before, .tnt_tooltip_closer:after {
-        @include box-shadow( none !important );
-        width: 12px !important;
-        height: 3px !important;
-        @include border-radius( 1px !important );
-        /*font-family: 'FontAwesome';
+  .tnt_tooltip_closer:before, .tnt_tooltip_closer:after {
+    @include box-shadow( none !important );
+    height: 3px !important;
+    width: 12px !important;
+    @include border-radius( 1px !important );
+    /*font-family: 'FontAwesome';
         content: '';
         position: absolute;
         width: 0px !important;
@@ -123,273 +126,292 @@
         @include border-radius( 0px );
         @include box-shadow( none !important)
         @include transform( initial !important ) */
-    }
+  }
 
-    .tnt_tooltip_closer:before {
-        left: 4px !important;
-        /* The close button circle
+  .tnt_tooltip_closer:before {
+    left: 4px !important;
+    /* The close button circle
         content: "\f111" !important;
         color:#000;
         font-size: 24px;
         top: -4px !important;
         left: 0px !important;*/
-    }
+  }
 
-    .tnt_tooltip_closer:after{
-        right: 4px !important;
-        /*  The close button X
+  .tnt_tooltip_closer:after{
+    right: 4px !important;
+    /*  The close button X
         content:"\f00d" !important;
         color:#FFF;
         font-size: 16px;
         top: 0px !important;
         right: 16px !important;*/
-    }
+  }
 
-    .tnt_zmenu {
-        border-style: hidden !important;
-        @include border-radius( 6px );
-        overflow: hidden;
-    }
+  .tnt_zmenu {
+    border-style: hidden !important;
+    overflow: hidden;
+    @include border-radius( 6px );
+  }
 
-    .tnt_zmenu_header {
-        background: $clr-ui-background !important;
-        color: inherit !important;
-    }
+  .tnt_zmenu_header {
+    background: $clr-ui-background !important;
+    color: inherit !important;
+  }
 
-    .tnt_zmenu_row, .tnt_zmenu_header {
-        border-color: $clr-ui-background-secondary;
-    }
+  .tnt_zmenu_row, .tnt_zmenu_header {
+    border-color: $clr-ui-background-secondary;
+  }
 
-    /*
+  /*
      * Probably deprecated ?
      */
-    .menu {
-        list-style: none;
-        border-bottom: 0.1em solid black;
-        margin-bottom: 2em;
-        padding: 0 0 0.5em;
+  .menu {
+    border-bottom: 0.1em solid black;
+    list-style: none;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
 
-        &:before {
-            content: "[";
-        }
-
-        &:after {
-            content: "]";
-        }
-
-        > li {
-            display: inline;
-        }
-
-        > li:before {
-            content: "|";
-            padding-right: 0.3em;
-        }
-
-        > li:nth-child(1):before {
-            content: "";
-            padding: 0;
-        }
+    &:before {
+      content: "[";
     }
 
-    /* Possibly deprecated? */
-    .cttv-blue-background{
-        background: $clr-ui-foreground !important;
-        background-color: $clr-ui-foreground !important;
+    &:after {
+      content: "]";
     }
 
-
-    // Target-disease score pill in accordion headings
-    .flower-petal{
-        color: #0f0 !important;
-        background: $clr-ui-foreground !important;
-        background-color: $clr-ui-foreground !important;
+    > li {
+      display: inline;
     }
 
-
-    .tnt_legend_div {
-        margin-top: 10px;
-    }
-    .tnt_legend_header {
-        font-weight: bold;
+    > li:before {
+      content: "|";
+      padding-right: 0.3em;
     }
 
-    .show-more-links {
-        cursor: pointer;
-        font-size: 75%;
+    > li:nth-child(1):before {
+      content: "";
+      padding: 0;
     }
+  }
 
-    .show-more-dots {
-        color: darkgrey;
-    }
+  /* Possibly deprecated? */
+  .cttv-blue-background{
+    background: $clr-ui-foreground !important;
+    background-color: $clr-ui-foreground !important;
+  }
 
-    .ot-drug {
-        background-color: #e0ebeb;
-        display: inline;
-        padding: .2em .6em .3em;
-        font-size: 75%;
-        font-weight: 500;
-        line-height: 1;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: baseline;
-        @include border-radius( 1.5em );
-        /*background: linear-gradient(90deg, #ffe5e5 50%, #f0f5f5 50%);*/
-    }
 
-    //@mixin pricetag ($bg, $border) {
-    //    white-space: nowrap;
-    //    position: relative;
-    //    margin: 0 5px 0 10px;
-    //    displaY: inline-block;
-    //    height: 20px;
-    //    border-radius: 0 5px 5px 0;
-    //    padding: 0 10px 0 15px;
-    //    color: white;
-    //    line-height: 18px;
-    //    background: $bg;
-    //    border: 1px solid $border;
-    //
-    //    &:after {
-    //        position: absolute;
-    //        right: 0;
-    //        margin: 1px 7px;
-    //        font-weight: bold;
-    //        font-size: 15px;
-    //    }
-    //
-    //    &:before {
-    //        position: absolute;
-    //        background: $bg;
-    //        content: "\25CF";
-    //        color: white;
-    //        text-shadow: 0 0 1px #aaa;
-    //        font-size: 12px;
-    //        line-height: 5px;
-    //        text-indent: 6px;
-    //        top: 3px;
-    //        left: -8px;
-    //        width: 13px;
-    //        height: 13px;
-    //        transform: rotate(45deg);
-    //        border-left: 1px solid $border;
-    //        border-bottom: 1px solid $border;
-    //    }
-    //
-    //}
-    //
-    //.pricetag {
-    //    &.drug {
-    //        @include pricetag ($clr-info, $clr-info-hover)
-    //    }
-    //    &.ortholog {
-    //        @include pricetag ($clr-success, $clr-success-hover)
-    //    }
-    //    &.phenotype {
-    //        @include pricetag ($clr-error, $clr-error-hover)
-    //    }
-    //}
+  // Target-disease score pill in accordion headings
+  .flower-petal{
+    background: $clr-ui-foreground !important;
+    background-color: $clr-ui-foreground !important;
+    color: #0f0 !important;
+  }
 
-    .tag-section {
-      margin-right: 10px;
-      .tag {
-          margin-right: 3px;
-          &.target {
-            color: $secondary-color;
-          }
-          &.disease {
-            color: $clr-warning
-          }
-          &.ortholog {
-            color: $clr-success;
-          }
-          &.drug {
-            color: $clr-info;
-          }
-          &.phenotype {
-              color: $clr-error;
-          }
+
+  .tnt_legend_div {
+    margin-top: 10px;
+  }
+
+  .tnt_legend_header {
+    font-weight: bold;
+  }
+
+  .show-more-links {
+    cursor: pointer;
+    font-size: 75%;
+  }
+
+  .show-more-dots {
+    color: darkgrey;
+  }
+
+  .ot-drug {
+    background-color: #e0ebeb;
+    display: inline;
+    font-size: 75%;
+    font-weight: 500;
+    line-height: 1;
+    padding: .2em .6em .3em;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+    @include border-radius( 1.5em );
+    /*background: linear-gradient(90deg, #ffe5e5 50%, #f0f5f5 50%);*/
+  }
+
+  //@mixin pricetag ($bg, $border) {
+  //    white-space: nowrap;
+  //    position: relative;
+  //    margin: 0 5px 0 10px;
+  //    displaY: inline-block;
+  //    height: 20px;
+  //    border-radius: 0 5px 5px 0;
+  //    padding: 0 10px 0 15px;
+  //    color: white;
+  //    line-height: 18px;
+  //    background: $bg;
+  //    border: 1px solid $border;
+  //
+  //    &:after {
+  //        position: absolute;
+  //        right: 0;
+  //        margin: 1px 7px;
+  //        font-weight: bold;
+  //        font-size: 15px;
+  //    }
+  //
+  //    &:before {
+  //        position: absolute;
+  //        background: $bg;
+  //        content: "\25CF";
+  //        color: white;
+  //        text-shadow: 0 0 1px #aaa;
+  //        font-size: 12px;
+  //        line-height: 5px;
+  //        text-indent: 6px;
+  //        top: 3px;
+  //        left: -8px;
+  //        width: 13px;
+  //        height: 13px;
+  //        transform: rotate(45deg);
+  //        border-left: 1px solid $border;
+  //        border-bottom: 1px solid $border;
+  //    }
+  //
+  //}
+  //
+  //.pricetag {
+  //    &.drug {
+  //        @include pricetag ($clr-info, $clr-info-hover)
+  //    }
+  //    &.ortholog {
+  //        @include pricetag ($clr-success, $clr-success-hover)
+  //    }
+  //    &.phenotype {
+  //        @include pricetag ($clr-error, $clr-error-hover)
+  //    }
+  //}
+
+  .tag-section {
+    margin-right: 10px;
+
+    .tag {
+      margin-right: 3px;
+
+      &.target {
+        color: $secondary-color;
+      }
+
+      &.disease {
+        color: $clr-warning
+      }
+
+      &.ortholog {
+        color: $clr-success;
+      }
+
+      &.drug {
+        color: $clr-info;
+      }
+
+      &.phenotype {
+        color: $clr-error;
       }
     }
+  }
 
-    /*
+  /*
     * Backgrounds
     */
 
 
 
-    .badge:hover {
-        color: #ffffff;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .badge-error {
-        background-color: $clr-error;
-    }
-    .badge-error:hover {
-        background-color: $clr-error-hover;
-    }
-    .badge-warning {
-        background-color: $clr-warning;
-    }
-    .badge-warning:hover {
-        background-color: $clr-warning-hover;
-    }
-    .badge-success {
-        background-color: $clr-success;
-    }
-    .badge-success:hover {
-        background-color: $clr-success-hover;
-    }
-    .badge-info {
-        background-color: $clr-info;
-    }
-    .badge-info:hover {
-        background-color: $clr-info-hover;
-    }
-    .badge-inverse {
-        background-color: $clr-inverse;
-    }
-    .badge-inverse:hover {
-        background-color: $clr-inverse-hover;
-    }
-    .badge-primary {
-        background-color: $clr-primary;
-    }
-    .badge-primary:hover {
-        background-color: $clr-primary-hover;
-    }
+  .badge:hover {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
 
-    .opacity-50 {
-        opacity: 0.5;
-    }
+  .badge-error {
+    background-color: $clr-error;
+  }
 
-    .highlight-warning {
-        background-color: $clr-warning-highlight;  /* 25% of standard warning color */
-    }
+  .badge-error:hover {
+    background-color: $clr-error-hover;
+  }
 
-    .highlight-primary {
-        background-color: $clr-primary-highlight;  /* 25% of standard primary color */
-    }
+  .badge-warning {
+    background-color: $clr-warning;
+  }
 
-    .highlight-info {
-    	background-color: $clr-info-highlight;  /* 25% of standard warning color */
-	}
+  .badge-warning:hover {
+    background-color: $clr-warning-hover;
+  }
+
+  .badge-success {
+    background-color: $clr-success;
+  }
+
+  .badge-success:hover {
+    background-color: $clr-success-hover;
+  }
+
+  .badge-info {
+    background-color: $clr-info;
+  }
+
+  .badge-info:hover {
+    background-color: $clr-info-hover;
+  }
+
+  .badge-inverse {
+    background-color: $clr-inverse;
+  }
+
+  .badge-inverse:hover {
+    background-color: $clr-inverse-hover;
+  }
+
+  .badge-primary {
+    background-color: $clr-primary;
+  }
+
+  .badge-primary:hover {
+    background-color: $clr-primary-hover;
+  }
+
+  .opacity-50 {
+    opacity: 0.5;
+  }
+
+  .highlight-warning {
+    background-color: $clr-warning-highlight;  /* 25% of standard warning color */
+  }
+
+  .highlight-primary {
+    background-color: $clr-primary-highlight;  /* 25% of standard primary color */
+  }
+
+  .highlight-info {
+    background-color: $clr-info-highlight;  /* 25% of standard warning color */
+  }
 
 
-    // pill-like horizonal list in target and disease profile pages
-    .ot-profile-synonym-list {
-        /*padding-right: 10px;*/
-        background-color: #e0ebeb;
-        padding: .2em .6em .3em;
-        font-size: 75%;
-        @include border-radius( 1.5em );
-        margin-right: 8px;
-        display: inline-block;
-        margin-bottom: 3px;
-    }
+  // pill-like horizonal list in target and disease profile pages
+  .ot-profile-synonym-list {
+    /*padding-right: 10px;*/
+    background-color: #e0ebeb;
+    display: inline-block;
+    font-size: 75%;
+    margin-bottom: 3px;
+    margin-right: 8px;
+    padding: .2em .6em .3em;
+    @include border-radius( 1.5em );
+  }
 
-    /*.ot-profile-synonym-list:before {
+  /*.ot-profile-synonym-list:before {
         font-family: 'FontAwesome';
         padding-right: 3px;
         font-size: 0.8em;
@@ -397,277 +419,289 @@
     }*/
 
 
-    .changeView {
-        color: #3a99d7;
-        cursor: pointer;
+  .changeView {
+    color: #3a99d7;
+    cursor: pointer;
+  }
+
+
+  /* Needed for the rounded corner in the viewport for Chrome */
+  .pwp-DiagramCanvas {
+    @include border-radius( 15px );
+  }
+
+
+  .dataTables_wrapper{
+
+  }
+
+  a.accordion-toggle{
+
+    /* remove links color in accordion headings */
+    color: inherit;
+    height: 100%;
+    text-decoration: none;
+    /* display: block; */
+    width: 100%;
+
+    &:hover{
+      color: inherit;
     }
+  }
+
+  .accordionCell {
+    overflow : auto;
+  }
+
+  .accordion-toggle { /* Needed for ie9? */
+    cursor : pointer;
+  }
+
+  .cttv-change-view {
+    cursor : pointer;
+    margin-top: 10px;
+  }
 
 
-    /* Needed for the rounded corner in the viewport for Chrome */
-    .pwp-DiagramCanvas {
-        @include border-radius( 15px );
-    }
-
-
-    .dataTables_wrapper{
-
-    }
-
-    a.accordion-toggle{
-        text-decoration: none;
-        /* display: block; */
-        width: 100%;
-        height: 100%;
-
-        /* remove links color in accordion headings */
-        color: inherit;
-
-        &:hover{
-            color: inherit;
-        }
-    }
-
-    .accordionCell {
-        overflow : auto;
-    }
-
-    .accordion-toggle { /* Needed for ie9? */
-        cursor : pointer;
-    }
-
-    .cttv-change-view {
-        cursor : pointer;
-        margin-top: 10px;
-    }
-
-
-    /*
+  /*
     * Summary section
      */
-    .summary-section-header {
-        padding: 0.5em;
-        background-color: $clr-ui-border;
-    }
+  .summary-section-header {
+    background-color: $clr-ui-border;
+    padding: 0.5em;
+  }
 
 
-    /*
+  /*
      * Flower
      */
 
 
-    .petal {
-        fill: $secondary-color;
-    }
+  .petal {
+    fill: $secondary-color;
+  }
 
 
 
-    /*
+  /*
      * Citations
      */
 
-    .epmc_citation_container{
-        padding-top:3px;
-        margin-bottom:25px;
+  .epmc_citation_container{
+    margin-bottom:25px;
+    padding-top:3px;
+  }
+
+  .epmc_citation_title{
+    font-size: 1.23em;
+  }
+
+  .epmc_citation_subdata {
+    padding-left:0px;
+
+    a {
+      color:$clr-text;
+
+      &:hover {
+        color: $clr-link-hover;
+      }
     }
+  }
 
-    .epmc_citation_title{
-        font-size: 1.23em;
-    }
+  .epmc_citation_authors, .epmc_citation_journal, .epmc_citation_source{
+    font-size: 13px;
+  }
 
-    .epmc_citation_subdata {
-        padding-left:0px;
+  .epmc_citation_authors{
+    padding: 4px 0;
+  }
 
-        a {
-            color:$clr-text;
+  .epmc_citation_source{
+    padding-top:5px;
+  }
 
-            &:hover {
-                color: $clr-link-hover;
-            }
-        }
-    }
-
-    .epmc_citation_authors, .epmc_citation_journal, .epmc_citation_source{
-        font-size: 13px;
-    }
-
-    .epmc_citation_authors{
-        padding: 4px 0;
-    }
-
-    .epmc_citation_source{
-        padding-top:5px;
-    }
-
-    .epmc_more_resuts {
-        float: left;
-        padding-top: 2px;
-        text-align: right;
-        width: 100%;
-    }
+  .epmc_more_resuts {
+    float: left;
+    padding-top: 2px;
+    text-align: right;
+    width: 100%;
+  }
 
 
 
-    /*
+  /*
      * For future homepage rebranding
      */
 
-    .numberCircle {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        width: 160px;
-        padding: 8px;
-        font-size: 32px;
-        line-height: 1em;
-        border: 2px solid #666;
-        position: relative;
+  .numberCircle {
+    border: 2px solid #666;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 32px;
+    line-height: 1em;
+    padding: 8px;
+    position: relative;
+    width: 160px;
 
-    }
-    .numberCircle .height_fix {
-        margin-top: 100%;
-    }
-    .numberCircle .content {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        margin-top: -16px; /* Note, this must be half the font size */
-    }
+  }
 
+  .numberCircle .height_fix {
+    margin-top: 100%;
+  }
 
-    .number-circle {
-        display: block;
-        //background: #0081D2;
-        min-width: 100px;
-        width: 140px;
-        margin: auto;
-        height: 140px;
-        padding: 54px 0px;
-        border-radius: 70px;
-        color: #fff;
-    }
+  .numberCircle .content {
+    height: 100%;
+    left: 0;
+    margin-top: -16px; /* Note, this must be half the font size */
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+  }
 
 
-    /*
+  .number-circle {
+    border-radius: 70px;
+    color: #fff;
+    display: block;
+    height: 140px;
+    margin: auto;
+    //background: #0081D2;
+    min-width: 100px;
+    padding: 54px 0px;
+    width: 140px;
+  }
+
+
+  /*
     *  calendar in outreach page
     */
-    .container .center-div {
-        @include center-div(600px);
-    }
+  .container .center-div {
+    @include center-div(600px);
+  }
 
-    /*
+  /*
      * PNG export button
      */
 
-    ot-target-associations-bubbles, ot-target-associations-tree{
-        ot-png > div {
-            margin-top:24px;
-            float: right;
-        }
+  ot-target-associations-bubbles, ot-target-associations-tree{
+    ot-png > div {
+      float: right;
+      margin-top:24px;
     }
+  }
 
 
 
-    /*
+  /*
      * Modals
      */
 
-    .modal-close-btn {
+  .modal-close-btn {
+    cursor: pointer;
+
+    .fa-circle {
+      color:#000;
+      font-size:24px;
+      position:absolute;
+      right:-12px;
+      top:-12px;
+    }
+
+    .fa-times {
+      color:#fff;
+      ont-size:16px;
+      position:absolute;
+      right:-8px;
+      top:-8px
+    }
+  }
+
+  ot-modal{
+    .modal-header{
+      h1,h2,h3,h4,h5,h6{
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+    }
+
+    .modal-header, .modal-body, .modal-footer{
+      padding: 10px;
+    }
+  }
+
+
+  /* The options shown in the batch search to re-assign fuzzy matches, etc */
+  .batch-search {
+    margin-top: 15px;
+
+    .search-item {
+      font-size:12px;
+      /* cursor: default; */
+      &.select-item {
         cursor: pointer;
+      }
 
-        .fa-circle {
-            position:absolute;
-            top:-12px;
-            right:-12px;
-            color:#000;
-            font-size:24px;
-        }
-
-        .fa-times {
-            position:absolute;
-            top:-8px;
-            right:-8px;
-            color:#FFF;
-            ont-size:16px
-        }
+      &.item-discarded {
+        color: $clr-ui-border;
+      }
     }
 
-    ot-modal{
-        .modal-header{
-            h1,h2,h3,h4,h5,h6{
-                margin-top: 0px;
-                margin-bottom: 0px;
-            }
-        }
+    .choose-header {
+      height: 2.5em;
+      margin-bottom: 10px;
+      padding-top: 0.6em;
+      //background: $clr-ui-border;
+      text-align:center;
 
-        .modal-header, .modal-body, .modal-footer{
-            padding: 10px;
+      .message {
+        margin-left: 0.4em;
+
+        .choose-query {
+          background: $clr-primary-highlight;
         }
+      }
+
+      &.search-header {
+        height: 3.5em;
+      }
     }
 
+    .search-options {
+      cursor: pointer;
+      float: right;
+      margin-right: 0.5em;
 
-    /* The options shown in the batch search to re-assign fuzzy matches, etc */
-    .batch-search {
-        margin-top: 15px;
-        .search-item {
-            font-size:12px;
-            /* cursor: default; */
-            &.select-item {
-                cursor: pointer;
-            }
-            &.item-discarded {
-                color: $clr-ui-border;
-            }
-        }
-        .choose-header {
-            //background: $clr-ui-border;
-            text-align:center;
-            height: 2.5em;
-            padding-top: 0.6em;
-            margin-bottom: 10px;
-            .message {
-                margin-left: 0.4em;
-                .choose-query {
-                    background: $clr-primary-highlight;
-                }
-            }
-            &.search-header {
-                height: 3.5em;
-            }
-        }
-        .search-options {
-            float: right;
-            margin-right: 0.5em;
-            cursor: pointer;
-            &.highlight {
-                color: $primary-color;
-            }
-            &.down {
-                color: $clr-ui-border;
-            }
-        }
+      &.highlight {
+        color: $primary-color;
+      }
 
-        .batch-search-box {
-            width: 95%;
-            //display: inline-block;
-            //margin-left: 5px;
-            height: 2.5em;
-            padding-left:5px;
-            @include border-radius (6px);
-        }
-
-        .batch-search-mappings-container {
-            margin-top: 10px;
-            height: 400px;
-            overflow-y: scroll;
-            border: 1px solid $clr-ui-border;
-            .batch-search-results-container {
-                margin-left: 5px;
-            }
-        }
+      &.down {
+        color: $clr-ui-border;
+      }
     }
+
+    .batch-search-box {
+      //display: inline-block;
+      //margin-left: 5px;
+      height: 2.5em;
+      padding-left:5px;
+      width: 95%;
+      @include border-radius (6px);
+    }
+
+    .batch-search-mappings-container {
+      border: 1px solid $clr-ui-border;
+      height: 400px;
+      margin-top: 10px;
+      overflow-y: scroll;
+
+      .batch-search-results-container {
+        margin-left: 5px;
+      }
+    }
+  }
 }
 
 

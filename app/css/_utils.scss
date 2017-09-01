@@ -1,106 +1,106 @@
 @mixin center-div ($width) {
-    width: $width;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width: $width;
 }
 
 @mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
 
 @mixin border-top-left-radius($radius){
-    -webkit-border-top-left-radius: $radius;
-    -moz-border-top-left-radius: $radius;
-    -ms-border-top-left-radius: $radius;
-    border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
 }
 
 
 @mixin border-top-right-radius($radius){
-    -webkit-border-top-right-radius: $radius;
-    -moz-border-top-right-radius: $radius;
-    -ms-border-top-right-radius: $radius;
-    border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
 }
 
 
 @mixin border-bottom-left-radius($radius){
-    -webkit-border-bottom-left-radius: $radius;
-    -moz-border-bottom-left-radius: $radius;
-    -ms-border-bottom-left-radius: $radius;
-    border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-bottom-left-radius: $radius;
+  -ms-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 
 
 @mixin border-bottom-right-radius($radius){
-    -webkit-border-bottom-right-radius: $radius;
-    -moz-border-bottom-right-radius: $radius;
-    -ms-border-bottom-right-radius: $radius;
-    border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+  -ms-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
 }
 
 
 @mixin box-shadow($shadow) {
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    -ms-box-shadow: $shadow;
-    -o-box-shadow: $shadow;
-    box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  box-shadow: $shadow;
 }
 
 
 @mixin transform($transform) {
-    -webkit-transform: $transform;
-    -moz-transform: $transform;
-    -ms-transform: $transform;
-    -o-transform: $transform;
-    transform: $transform;
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
 }
 
 
 @mixin transform-origin($transform) {
-    -webkit-transform-origin: $transform;
-    -moz-transform-origin: $transform;
-    -ms-transform-origin: $transform;
-    -o-transform-origin: $transform;
-    transform-origin: $transform;
+  -webkit-transform-origin: $transform;
+  -moz-transform-origin: $transform;
+  -ms-transform-origin: $transform;
+  -o-transform-origin: $transform;
+  transform-origin: $transform;
 }
 
 
 @mixin transition($trans){
-    -webkit-transition: $trans;
-    -moz-transition: $trans;
-    -ms-transition: $trans;
-    -o-transition: $trans;
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -ms-transition: $trans;
+  -o-transition: $trans;
 }
 
 @mixin gradient($grad){
-    background: -webkit-linear-gradient($grad);
-    background: -moz-linear-gradient($grad);
-    background: -o-linear-gradient($grad);
-    background: linear-gradient($grad);
+  background: -webkit-linear-gradient($grad);
+  background: -moz-linear-gradient($grad);
+  background: -o-linear-gradient($grad);
+  background: linear-gradient($grad);
 }
 
 @mixin scrollbar($width) {
-    ::-webkit-scrollbar {
-        width: $width;
-    }
+  ::-webkit-scrollbar {
+    width: $width;
+  }
 
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        //border-radius: 10px;
-    }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //border-radius: 10px;
+  }
 
-    ::-webkit-scrollbar-thumb {
-        //border-radius: 10px;
-        background: $extra-brand-color;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    }
+  ::-webkit-scrollbar-thumb {
+    //border-radius: 10px;
+    background: $extra-brand-color;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
 }
 
 @function inv-color($color) {

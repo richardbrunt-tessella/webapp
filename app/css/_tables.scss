@@ -9,400 +9,398 @@
 
 /* wrapper for bootstrap overrides */
 #ot-page-app {
+  table.dataTable thead > tr > th{
+    padding-left: 8px ;
+    /*padding-right: 8px ;*/
+  }
 
-    table.dataTable thead > tr > th{
-        padding-left: 8px ;
-        /*padding-right: 8px ;*/
-    }
-
-    table.dataTable thead .sorting {
-        /*background-image: url('../images/sort_both.png') ;
+  table.dataTable thead .sorting {
+    /*background-image: url('../images/sort_both.png') ;
         background-repeat: no-repeat ;
         background-origin: content-box ;
         background-position-x: right ;
         background-position-y: bottom ;*/
+  }
+
+  .ot-access-public, .ot-access-private {
+    background-color: #ccc;
+    border-radius: 8px;
+    color: #fff;
+    display: block;
+    font-size: 10px;
+    height: 16px;
+    padding-top: 1px;
+    text-align: center;
+    width: 16px;
+  }
+
+  .ot-access-private {
+    background-color: $clr-private-data;
+
+    &:after {
+      content: "G";
     }
+  }
 
-    .ot-access-public, .ot-access-private {
-        display: block;
-        width: 16px;
-        height: 16px;
-        background-color: #CCC;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 10px;
-        padding-top: 1px;
-        color: #FFF;
-    }
-
-    .ot-access-private {
-        background-color: $clr-private-data;
-
-        &:after {
-            content: "G";
-        }
-    }
-
-    .ot-access-public:after {
-        content: "P";
-        /*content: "\f023";
+  .ot-access-public:after {
+    content: "P";
+    /*content: "\f023";
         font-family: FontAwesome;*/
+  }
+
+
+
+  .ot-literature-modal {
+    padding: 10px;
+  }
+
+
+  .sorting::after, .sorting_asc::after, .sorting_desc::after {
+    bottom: 5px;
+    color: #ddd;
+    //left: 50%;
+    content: '\f0dc';
+    font-family: 'FontAwesome';
+    font-size:12px;
+    opacity: 1;
+    right: 6px;
+    @include transition( color 0.3s );
+  }
+
+  .sorting_asc::after{
+    color: $clr-ui-selected;
+    content: '\f0de';
+  }
+
+  .sorting_desc::after {
+    color: $clr-ui-selected;
+    content: '\f0dd';
+  }
+
+  .sorting:hover::after {
+    color: #999;
+    @include transition( color 0.3s );
+  }
+
+
+
+  /* Evidence tables */
+
+
+
+  .ot-evidence-table {
+    >thead>tr>th {
+      border-bottom: none;
+      border-right: 1px solid #ddd;
+      border-top: none;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 15px;
+      padding: 6px ;
+      padding-right: 26px ;
     }
 
-
-
-    .ot-literature-modal {
-        padding: 10px;
+    thead th:last-child {
+      border-right: none;
     }
 
+    tbody {
+      font-size: 12px;
 
-    .sorting::after, .sorting_asc::after, .sorting_desc::after {
-        font-size:12px;
-        bottom: 5px;
-        right: 6px;
-        //left: 50%;
-        content: '\f0dc';
-        font-family: 'FontAwesome';
-        opacity: 1;
-        color: #DDD;
-        @include transition( color 0.3s );
+      tr td {
+        line-height: 14px;
+        padding: 8px 8px 16px 8px ;   /* allow extra padding at the bottom of each row */
+      }
     }
 
-    .sorting_asc::after{
-        color: $clr-ui-selected;
-        content: '\f0de';
+    .badge{
+      background: #ddd;
+      color: #777;
     }
 
-    .sorting_desc::after {
-        color: $clr-ui-selected;
-        content: '\f0dd';
+    ul {
+      padding-left: 15px;
     }
 
-    .sorting:hover::after {
-        color: #999;
-        @include transition( color 0.3s );
-    }
+  }
+
+
+  .ot-publications-string {
+    white-space:nowrap;
+  }
+
+
+  a.dt-button{
+    font-size: 16px ;
+    padding: 2px 7px ;
+  }
 
 
 
-    /* Evidence tables */
-
-
-
-    .ot-evidence-table {
-
-        >thead>tr>th {
-            border-bottom: none;
-            border-top: none;
-            border-right: 1px solid #DDD;
-            padding: 6px ;
-            padding-right: 26px ;
-            line-height: 15px;
-            font-weight: 300;
-            font-size: 16px;
-        }
-
-        thead th:last-child {
-            border-right: none;
-        }
-
-        tbody {
-            font-size: 12px;
-
-            tr td {
-                padding: 8px 8px 16px 8px ;   /* allow extra padding at the bottom of each row */
-                line-height: 14px;
-            }
-        }
-
-        .badge{
-            background: #DDD;
-            color: #777;
-        }
-
-        ul {
-            padding-left: 15px;
-        }
-
-    }
-
-
-    .ot-publications-string {
-        white-space:nowrap;
-    }
-
-
-    a.dt-button{
-        padding: 2px 7px ;
-        font-size: 16px ;
-    }
-
-
-
-    /*
+  /*
      * Matrix table
      */
 
-    table.matrix-table {
+  table.matrix-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+
+    .dataTables_empty {
+      text-align: center;
+    }
+
+    thead {
+      > tr {
+        margin-bottom: 10px ;
+
+        > th {
+          /*white-space: nowrap;*/
+          background-position: center bottom 5px ;
+          border: none ;
+          font-size: 12px;
+          font-weight: 400;
+          height:140px;
+          line-height: 11px;
+          min-width: 30px;
+          padding: 5px ;
+          padding-left: 0 ;
+          width: 7%; //48px; /*5%;*/
+          /*vertical-align: middle ;*/
+
+          /* Fix for the new DataTables styling */
+          &:after {
+            margin-right: -4px;
+            //right: 25px;
+            right: 50%;
+          }
+
+          &:first-child:after {
+            right: 16%; //25px ;
+          }
+
+          &:last-child:after {
+            left: 16%; //25px;
+            margin-left: -4px;
+          }
+
+          &:hover {
+            background-color: rgba(210,210,210,0.2);    /* values to match F4F4F4 */
+          }
+
+          &:first-child {
+            background-position: right 5px bottom 5px ;
+            padding-right: 5px;
+            width: auto;
+
+            > div {
+              // width:0;
+              // float: right;
+              // margin-right: 24px;
+              > span {
+                margin-left: 86%;
+              }
+            }
+          }
+
+          &:last-child {
+            background-position: left 5px bottom 5px ;
+            padding-left: 5px;
+            width: auto;
+
+            > div {
+              // width:0;
+              // float: left;
+              // margin-left: 24px;
+              > span {
+                margin-left: 14%;
+              }
+            }
+          }
+
+          > div {
+            height: 1px;
+            margin-bottom: 20px;
+            vertical-align: top;
+
+            > span{
+              display: block;
+              margin-left: 50%;
+              width: 140px;
+              @include transform-origin( 0 0 );
+              @include transform( rotate(-60deg) translateY(-50%) );
+            }
+          }
+
+        }
+      }
+    }
+
+
+    tbody {
+      > tr > td {
+        border: 1px solid #fff;
         border-collapse: collapse;
-        width: 100%;
-        table-layout: fixed;
-
-        .dataTables_empty {
-            text-align: center;
-        }
-
-        thead {
-            > tr {
-                margin-bottom: 10px ;
-
-                > th {
-                    padding-left: 0 ;
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 11px;
-                    height:140px;
-                    /*white-space: nowrap;*/
-                    background-position: center bottom 5px ;
-                    padding: 5px ;
-                    border: none ;
-                    width: 7%; //48px; /*5%;*/
-                    min-width: 30px;
-                    /*vertical-align: middle ;*/
-
-                    /* Fix for the new DataTables styling */
-                    &:after {
-                        //right: 25px;
-                        right: 50%;
-                        margin-right: -4px;
-                    }
-
-                    &:first-child:after {
-                        right: 16%; //25px ;
-                    }
-
-                    &:last-child:after {
-                        left: 16%; //25px;
-                        margin-left: -4px;
-                    }
-
-                    &:hover {
-                        background-color: rgba(210,210,210,0.2);    /* values to match F4F4F4 */
-                    }
-
-                    &:first-child {
-                        padding-right: 5px;
-                        background-position: right 5px bottom 5px ;
-                        width: auto;
-
-                        > div {
-                            // width:0;
-                            // float: right;
-                            // margin-right: 24px;
-                            > span {
-                                margin-left: 86%;
-                            }
-                        }
-                    }
-
-                    &:last-child {
-                        padding-left: 5px;
-                        background-position: left 5px bottom 5px ;
-                        width: auto;
-
-                        > div {
-                            // width:0;
-                            // float: left;
-                            // margin-left: 24px;
-                            > span {
-                                margin-left: 14%;
-                            }
-                        }
-                    }
-
-                    > div {
-                        height: 1px;
-                        vertical-align: top;
-                        margin-bottom: 20px;
-
-                        > span{
-                            display: block;
-                            width: 140px;
-                            margin-left: 50%;
-                            @include transform-origin( 0 0 );
-                            @include transform( rotate(-60deg) translateY(-50%) );
-                        }
-                    }
-
-                }
-            }
-        }
-
-
-        tbody {
-            > tr > td {
-                border-collapse: collapse;
-                border: 1px solid #FFF ;
-                padding: 0;
-                padding-bottom: 0 ;
-                font-size: 12px;
-                line-height: 12px;
-
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                span {
-                    display: block;
-                    width: 100%;
-                    height: 16px;
-                }
-
-                &:first-child {
-                    border: none;
-                    text-align: right;
-                    vertical-align: middle;
-                    padding-right: 5px ;
-                    overflow: hidden;
-
-                    span {
-                        display: inline;
-                    }
-                }
-
-                &:last-child {
-                    border: none;
-                    vertical-align: middle;
-                    padding-left: 5px;
-                    overflow: hidden;
-
-                    span {
-                        display: inline;
-                    }
-                }
-
-                a {
-                    color: inherit;
-                }
-            }
-
-            &:hover{
-                text-decoration:none;
-            }
-
-            > tr:hover {
-                background-color: #F6F6F6;
-            }
-
-
-        }
-    }
-
-
-
-    .matrix-table span.no-data, .matrix-legend span.no-data{
-        border: 1px solid #EEE;
-        background: #FFF;
-        color: #FFF;
-    }
-
-    .matrix-table span.zero-score, .matrix-legend span.zero-score{
-        border: 1px solid #EEE;
-        background: #eef5fb;
-        color: #eef5fb;
-    }
-
-    .matrix-table span.value-0, .matrix-legend span.value-0 {
-        background: #EEE;
-        color: #EEE;
-    }
-
-
-
-    .matrix-legend, .matrix-legend-info{
-        /* Do one for horizontal layout */
         font-size: 12px;
-        margin: 5px;
-    }
+        line-height: 12px;
+        overflow: hidden;
+        padding: 0;
+        padding-bottom: 0 ;
+        text-overflow: ellipsis;
 
-    .matrix-legend-layout-h span {
-        float:left;
-    }
+        white-space: nowrap;
 
-    span.matrix-legend-from {
-        padding-right: 5px;
-        padding-top: 2px
-    }
-
-    span.matrix-legend-to {
-        padding-left: 5px;
-        padding-top: 2px
-    }
-
-    span.matrix-legend-text {
-        padding-left: 0px;
-    }
-
-    span.matrix-legend-item {
-        display:block;
-        /*border: 1px solid #FFF;*/
-    }
-
-    span.matrix-legend-background {
-        display:block;
-        width:20px;
-        height:20px;
-    }
-
-    span.matrix-legend-background-label {
-        display:block;
-    }
-
-    .matrix-legend-layout-v .matrix-legend-item {
-        /*width: inherit;*/
-
-        > span {
-            float:left;
+        span {
+          display: block;
+          height: 16px;
+          width: 100%;
         }
+
+        &:first-child {
+          border: none;
+          overflow: hidden;
+          padding-right: 5px ;
+          text-align: right;
+          vertical-align: middle;
+
+          span {
+            display: inline;
+          }
+        }
+
+        &:last-child {
+          border: none;
+          overflow: hidden;
+          padding-left: 5px;
+          vertical-align: middle;
+
+          span {
+            display: inline;
+          }
+        }
+
+        a {
+          color: inherit;
+        }
+      }
+
+      &:hover{
+        text-decoration:none;
+      }
+
+      > tr:hover {
+        background-color: #f6f6f6;
+      }
+
+
     }
+  }
 
-    .matrix-legend-info span{
-        padding-right:5px;
+
+
+  .matrix-table span.no-data, .matrix-legend span.no-data{
+    background: #fff;
+    border: 1px solid #eee;
+    color: #fff;
+  }
+
+  .matrix-table span.zero-score, .matrix-legend span.zero-score{
+    background: #eef5fb;
+    border: 1px solid #eee;
+    color: #eef5fb;
+  }
+
+  .matrix-table span.value-0, .matrix-legend span.value-0 {
+    background: #eee;
+    color: #eee;
+  }
+
+
+
+  .matrix-legend, .matrix-legend-info{
+    /* Do one for horizontal layout */
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  .matrix-legend-layout-h span {
+    float:left;
+  }
+
+  span.matrix-legend-from {
+    padding-right: 5px;
+    padding-top: 2px
+  }
+
+  span.matrix-legend-to {
+    padding-left: 5px;
+    padding-top: 2px
+  }
+
+  span.matrix-legend-text {
+    padding-left: 0px;
+  }
+
+  span.matrix-legend-item {
+    display:block;
+    /*border: 1px solid #FFF;*/
+  }
+
+  span.matrix-legend-background {
+    display:block;
+    height:20px;
+    width:20px;
+  }
+
+  span.matrix-legend-background-label {
+    display:block;
+  }
+
+  .matrix-legend-layout-v .matrix-legend-item {
+    /*width: inherit;*/
+
+    > span {
+      float:left;
     }
+  }
 
-    ot-target-associations-tree .legendBox {
-        border: none ;
-    }
+  .matrix-legend-info span{
+    padding-right:5px;
+  }
+
+  ot-target-associations-tree .legendBox {
+    border: none ;
+  }
 
 
 
 
-    /*
+  /*
      * HPA heatmap
      */
 
-    /* Fix for the new DataTables styling */
-    ot-hpa-tissue-expression table.matrix-table thead > tr > th:last-child,
-    ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child,
-    ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child:hover  {
-        /* display: none ; */
-        visibility: hidden;
+  /* Fix for the new DataTables styling */
+  ot-hpa-tissue-expression table.matrix-table thead > tr > th:last-child,
+  ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child,
+  ot-hpa-tissue-expression table.matrix-table tbody > tr > td:last-child:hover  {
+    /* display: none ; */
+    visibility: hidden;
+  }
+
+  ot-hpa-tissue-expression table.matrix-table thead > tr > th:first-child{
+    > div {
+      > span {
+        margin-left: 92.5%;
+      }
     }
 
-    ot-hpa-tissue-expression table.matrix-table thead > tr > th:first-child{
-        > div {
-            > span {
-                margin-left: 92.5%;
-            }
-        }
-
-        &:after {
-            right: 8%;
-        }
+    &:after {
+      right: 8%;
     }
+  }
 
 
-    /*
+  /*
 
     table.matrix-table thead > tr > th:last-child {
         padding-left: 5px;
@@ -414,13 +412,13 @@
 
 
 
-    .scroll-table-panel .table-panel{
-        overflow-x: auto;
-    }
+  .scroll-table-panel .table-panel{
+    overflow-x: auto;
+  }
 
 }
 
 
 #tissuesSummaryTargetList tr th {
-    width: 25px !important;
+  width: 25px !important;
 }

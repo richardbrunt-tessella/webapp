@@ -8,63 +8,63 @@
 }*/
 
 .text-lowlight{
-    color: $clr-text-dim;
+  color: $clr-text-dim;
 }
 
 .text-highlight{
-    color: $clr-text-em;
+  color: $clr-text-em;
 }
 
 .text-nolight{
-    color: $clr-text; /*#666;*/
+  color: $clr-text; /*#666;*/
 }
 
 .small{
-    font-size: 12px;
-    /*line-height: 1.2;*/
+  font-size: 12px;
+  /*line-height: 1.2;*/
 }
 
 .bold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .text-small{
-    font-size: 12px;
-    /*line-height: 1.2;*/
+  font-size: 12px;
+  /*line-height: 1.2;*/
 }
 
 .large {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .text-disabled, .disabled{
-    color: $clr-text-dim;
-    text-decoration: none;
-    cursor: default;
+  color: $clr-text-dim;
+  cursor: default;
+  text-decoration: none;
 }
 
 .disabled {
-    cursor: not-allowed !important;
+  cursor: not-allowed !important;
 }
 
 .text-content-highlight {
-    padding: 0px 2px;
+  padding: 0px 2px;
 }
 
 .ot-author-et-al {
-    font-style: italic;
+  font-style: italic;
 }
 
 ::selection {
-    /* do NOT use sass for this as this will break the scarcely supported ::selection; so change color slightly to trick SASS */
-    background: #FF6350;
-    color: #FFD0CB;
+  /* do NOT use sass for this as this will break the scarcely supported ::selection; so change color slightly to trick SASS */
+  background: #ff6350;
+  color: #ffd0cb;
 }
 
 ::moz-selection {
-    /* do NOT use sass for this as this will break the scarcely supported ::selection; so change color slightly to trick SASS */
-    background: #FF6351;
-    color: #FFD0CC;
+  /* do NOT use sass for this as this will break the scarcely supported ::selection; so change color slightly to trick SASS */
+  background: #ff6351;
+  color: #ffd0cc;
 }
 
 /*
@@ -74,33 +74,33 @@
 
 a {
 
+  color: $clr-link;
+
+  &:hover {
+    color: $clr-link-hover;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:focus {
     color: $clr-link;
-
-    &:hover {
-        text-decoration: none;
-        color: $clr-link-hover;
-        cursor: pointer;
-    }
-
-    &:focus {
-        /* Remove the thick blue outline from clicked links */
-        outline: none;
-        text-decoration: none;
-        color: $clr-link;
-    }
+    /* Remove the thick blue outline from clicked links */
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 .ot-external-link {
-    /*white-space: nowrap;*/
+  /*white-space: nowrap;*/
 }
 
 .ot-external-link::after {
-    /*font: normal normal normal 14px/1 FontAwesome;*/
-    font-family: 'FontAwesome';
-    content: "\00A0\f08e";  /* non-breaking space + fontawesome link icon */
-    padding-left: 0px;
-    font-size: inherit;
-    color: inherit;
+  color: inherit;
+  content: "\00A0\f08e";  /* non-breaking space + fontawesome link icon */
+  /*font: normal normal normal 14px/1 FontAwesome;*/
+  font-family: 'FontAwesome';
+  font-size: inherit;
+  padding-left: 0px;
 }
 
 
@@ -110,27 +110,27 @@ a {
 
 
 .ot-docs-section {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 
-    a {
-        color: #333;
-        border-bottom: 1px dotted $secondary-color;
-    }
+  a {
+    border-bottom: 1px dotted $secondary-color;
+    color: #333;
+  }
 
-    .ot-link-quote {
-        // border-bottom: none;
-        color: #1e5799;
-        background: #f5f5f5;
-        padding: 3px;
-        border-radius: 3px;
-        border: 1px solid #eee;
-    }
+  .ot-link-quote {
+    background: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    // border-bottom: none;
+    color: #1e5799;
+    padding: 3px;
+  }
 }
 
 
 a.literature-matched-sentences {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 
