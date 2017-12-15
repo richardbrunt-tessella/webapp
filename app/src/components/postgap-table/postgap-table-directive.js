@@ -199,7 +199,7 @@ angular.module('otDirectives')
 
                 function initTable () {
                     var table = elem[0].getElementsByTagName('table');
-                    $(table).DataTable(otUtils.setTableToolsParams({
+                    var dtable = $(table).DataTable(otUtils.setTableToolsParams({
                         'data': formatDataToArray(scope.ext.data),
                         'ordering': true,
                         'order': [[1, 'asc']],
@@ -238,10 +238,35 @@ angular.module('otDirectives')
                                 'width': '14%',
                                 'mRender': otColumnFilter.mRenderGenerator(19),
                                 'mData': otColumnFilter.mDataGenerator(5, 19)
+                            },
+                            {
+                                'targets': [5, 6, 7], // default v2d hidden
+                                'visible': false
+                            },
+                            {
+                                'targets': [9, 10, 11, 12, 13, 14, 15, 16], // default v2g hidden
+                                'visible': false
                             }
                         ],
                         initComplete: otColumnFilter.initCompleteGenerator(dropdownColumns)
                     }, (scope.title ? scope.title + '-' : '') + '-common_diseases'));
+
+                    scope.onToggleV2D = function () {
+                        // show or hide detail of v2d
+                        // [3, 4, 5, 6, 7].forEach(function (i) {
+                        [5, 6, 7].forEach(function (i) {
+                            var col = dtable.column(i);
+                            col.visible(!col.visible());
+                        });
+                    };
+
+                    scope.onToggleV2G = function () {
+                        // show or hide detail of v2g
+                        [9, 10, 11, 12, 13, 14, 15, 16].forEach(function (i) {
+                            var col = dtable.column(i);
+                            col.visible(!col.visible());
+                        });
+                    };
                 }
             }
         };
