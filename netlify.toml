@@ -40,3 +40,6 @@
 
 [context.postgap-table.environment]
   APIHOST = "https://master-dot-open-targets-eu-dev.appspot.com/"
+
+[context.postgap-table-collapsible.environment]
+  APIHOST = "https://master-dot-open-targets-eu-dev.appspot.com/"
